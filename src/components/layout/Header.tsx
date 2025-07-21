@@ -76,10 +76,16 @@ const Header: React.FC = () => {
         onHide={() => setSidebarOpen(false)}
         className="p-sidebar-lg"
         style={{
+          width: 320,
+          maxWidth: '90vw',
           background: 'rgba(255,255,255,0.95)',
           backdropFilter: 'blur(10px)',
           borderLeft: '2px solid #b19cd9',
           boxShadow: '-4px 0 20px rgba(0,0,0,0.1)',
+          padding: '2rem 1.5rem 1.5rem 1.5rem',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
         }}
         header={
           <div className="flex items-center space-x-3 p-4">
@@ -97,17 +103,22 @@ const Header: React.FC = () => {
           </div>
         }
       >
-        <div className="p-4">
-          <PanelMenu
-            model={menuItems}
-            className="w-full"
-            style={{
-              background: 'none',
-              border: 'none',
-              boxShadow: 'none',
-            }}
-          />
-          <div className="mt-8 pt-6 border-t border-gray-200">
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          <nav style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '1rem' }}>
+            {navItems.map(item => (
+              <Link
+                key={item.url}
+                href={item.url}
+                className="no-underline"
+                style={{ fontSize: '1.25rem', fontWeight: 600, color: '#7c4bb8', padding: '0.5rem 0', borderRadius: '0.5rem', transition: 'background 0.2s', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
+                onClick={() => setSidebarOpen(false)}
+              >
+                <span className="pi pi-home" style={{ fontSize: '1.2rem', color: '#b19cd9' }}></span>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <div style={{ marginTop: 'auto', paddingTop: '2rem' }}>
             <Link href="/contact" className="no-underline">
               <Button
                 label="Get in Touch"
