@@ -6,7 +6,6 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import { PrimeReactProvider } from 'primereact/api';
-import { Card } from 'primereact/card';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ParticlesOverlay from '@/components/common/ParticlesOverlay';
@@ -94,23 +93,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <ParticlesOverlay />
           <div className="parallax-background"></div>
-          <main className="pt-20 relative z-10 flex justify-center min-h-screen">
-            <Card
-              className="main-content-card"
-              style={{
-                width: '100%',
-                maxWidth: 1200,
-                margin: '2rem auto',
-                background: 'rgba(255,255,255,0.65)',
-                border: '2px solid #ffb3d9',
-                borderRadius: '2rem',
-                boxShadow: '0 8px 32px 0 rgba(177,156,217,0.10)',
-                padding: '2.5rem 2rem',
-                backdropFilter: 'blur(8px)',
-              }}
-            >
-              {children}
-            </Card>
+          <main
+            className="pt-20 relative z-10 flex flex-col items-center min-h-screen px-8 md:px-12"
+            style={{ width: '100%', maxWidth: 1200, margin: '0 auto' }}
+          >
+            {children}
           </main>
           <Footer />
         </PrimeReactProvider>

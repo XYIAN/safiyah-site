@@ -10,7 +10,7 @@ interface InfoCardProps {
 export default function InfoCard({ icon, title, description, className = '' }: InfoCardProps) {
   return (
     <div
-      className={`flex flex-col align-items-center justify-content-center border-round-xl shadow-md p-6 mb-4 ${className}`}
+      className={`flex flex-col items-center justify-center border-round-xl shadow-md p-6 md:p-8 mb-4 ${className}`}
       style={{
         maxWidth: 340,
         margin: '0 auto',

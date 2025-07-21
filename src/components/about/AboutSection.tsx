@@ -38,7 +38,7 @@ const AboutSection: React.FC = () => {
           <Button variant="primary" href="/experience" className="mt-8">
             View My Experience
           </Button>
-          <div className="flex flex-wrap justify-content-center gap-4 mt-8">
+          <div className="flex flex-col items-center gap-4 mt-8 w-full">
             <InfoCard
               icon={<Brain className="w-12 h-12 text-primary-purple" />}
               title="ADHD Specialist"
@@ -71,7 +71,7 @@ const AboutSection: React.FC = () => {
             My commitment to mental health care is guided by core values that shape every aspect of
             my professional practice.
           </p>
-          <div className="flex flex-wrap justify-content-center gap-4">
+          <div className="flex flex-col items-center gap-4 w-full">
             <InfoCard
               icon={<Shield className="w-12 h-12 text-primary-purple" />}
               title="Compassion"
