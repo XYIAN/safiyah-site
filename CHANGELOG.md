@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1] - 2024-06-09
+### Fixed
+- Made /links a client component and fixed icon usage for Next.js/Netlify compatibility
+- Ensured header is always fixed and not affected by background animation
+- Polished layout and centering for both Netlify and localhost compatibility
+- Ran local production build to verify all changes
+
 ## [1.5.0] - 2024-06-09
 ### Added
 - Glossy, glassmorphic Hero section for a more professional look
