@@ -13,26 +13,13 @@ body {
   overflow-x: hidden;
   font-family: $font-family-primary;
   color: $text-primary;
-  background-color: #fef7f7;
   line-height: $line-height-normal;
   position: relative;
 }
 
 body {
-  color: #2c1810;
-  background: linear-gradient(
-      135deg,
-      rgba(254, 247, 247, 0.3) 0%,
-      rgba(248, 240, 255, 0.3) 50%,
-      rgba(254, 247, 247, 0.3) 100%
-    );
-  position: relative;
-  z-index: 1;
-}
-
-// Parallax background with better visibility
-.parallax-background {
-  position: fixed;
+  background-color: $bg-primary;
+    position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -46,49 +33,6 @@ body {
   opacity: 0.6;
   animation: subtleFloat 20s ease-in-out infinite;
   
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 158, 205, 0.3) 0%,
-      rgba(177, 156, 217, 0.3) 50%,
-      rgba(255, 158, 205, 0.3) 100%
-    );
-    z-index: 1;
-  }
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 240, 245, 0.4) 0%,
-      rgba(248, 240, 255, 0.3) 50%,
-      rgba(255, 240, 245, 0.4) 100%
-    );
-    z-index: 2;
-  }
-  
-  // Mobile optimization - disable parallax on mobile for better performance
-  @media (max-width: $breakpoint-md) {
-    background-attachment: scroll;
-    opacity: 0.5;
-    animation: none; // Disable animation on mobile for performance
-  }
-  
-  // Tablet optimization
-  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-    opacity: 0.55;
-  }
 }
 
 // Ensure content is above background
@@ -106,9 +50,9 @@ main {
   --primary-pink-dark: #ff7eb3;
   --primary-purple-dark: #9b7cc7;
   
-  --bg-primary: #fef7f7;
-  --bg-secondary: #f8f0ff;
-  --bg-accent: #fff0f5;
+  --bg-primary: #ecbcbc;
+  --bg-secondary: #9680aa;
+  --bg-accent: #cd839c;
   
   --text-primary: #2c1810;
   --text-secondary: #5a4a42;
@@ -188,6 +132,29 @@ p {
   margin-bottom: $spacing-md;
   color: var(--text-secondary);
   line-height: $line-height-relaxed;
+  font-weight: 500;
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+strong {
+  color: var(--primary-purple);
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffb3d9 0%, #b19cd9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight, .text-highlight {
+  color: var(--primary-pink);
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffb3d9 0%, #b19cd9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 0.2em;
+  border-radius: 0.2em;
 }
 
 // Button styles with pastel theme

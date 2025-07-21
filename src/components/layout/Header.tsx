@@ -1,137 +1,135 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { NavItem } from '@/types';
-import Button from '@/components/common/Button';
+import Image from 'next/image';
+import { Sidebar } from 'primereact/sidebar';
+import { PanelMenu } from 'primereact/panelmenu';
+import { MenuItem } from 'primereact/menuitem';
+import { Menu as LucideMenu } from 'lucide-react';
+import { Button } from 'primereact/button';
+
+const navItems = [
+  { label: 'Home', url: '/' },
+  { label: 'About', url: '/about' },
+  { label: 'Experience', url: '/experience' },
+  { label: 'Education', url: '/education' },
+  { label: 'Contact', url: '/contact' },
+];
 
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const navItems: NavItem[] = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Experience', href: '/experience' },
-    { label: 'Education', href: '/education' },
-    { label: 'Contact', href: '/contact' }
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const menuItems: MenuItem[] = navItems.map(item => ({
+    label: item.label,
+    icon: 'pi pi-home',
+    command: () => {
+      window.location.href = item.url;
+      setSidebarOpen(false);
+    }
+  }));
 
   return (
-    <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
-          : 'bg-transparent'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+    <header
+      className="fixed top-0 left-0 right-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200/50 shadow-sm"
+      style={{
+        background: 'rgba(255, 255, 255, 0.95)',
+        backdropFilter: 'blur(10px)',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        boxShadow: '0 2px 20px rgba(0, 0, 0, 0.1)',
+        zIndex: 1000,
+      }}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <motion.div
-            className="flex items-center space-x-2"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link href="/" className="text-2xl font-bold text-primary-purple">
-              Safiyah Sohail
-            </Link>
-          </motion.div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => (
-              <motion.a
-                key={item.href}
-                href={item.href}
-                className="text-gray-700 hover:text-primary-purple transition-colors duration-200 font-medium"
-                whileHover={{ y: -2 }}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.3, 
-                  delay: index * 0.1,
-                  ease: 'easeOut' 
-                }}
-              >
-                {item.label}
-              </motion.a>
-            ))}
-            <Button variant="primary" size="sm" href="/contact">
-              Get in Touch
-            </Button>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <motion.button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            onClick={toggleMenu}
-            whileTap={{ scale: 0.95 }}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
+      <div className="flex items-center justify-between h-20 w-full px-6">
+        {/* Left: Logo and Name */}
+        <div className="flex items-center space-x-3">
+          <div style={{ width: 40, height: 40, position: 'relative' }}>
+            <Image
+              src="/icons/main-icon.png"
+              alt="Safiyah Logo"
+              fill
+              className="rounded-full object-cover"
+              style={{ minWidth: 40, minHeight: 40, background: '#b19cd9' }}
+              onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
+            {/* Fallback: colored circle if image fails */}
+            <span className="absolute inset-0 rounded-full bg-primary-purple" style={{ display: 'none' }}></span>
+          </div>
+          <span className="text-xl font-bold text-gray-800" style={{ color: '#2d3748', fontWeight: 700 }}>
+            Safiyah Sohail
+          </span>
         </div>
 
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className="md:hidden"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
-            >
-              <div className="py-4 space-y-4 border-t border-gray-200">
-                {navItems.map((item, index) => (
-                  <motion.a
-                    key={item.href}
-                    href={item.href}
-                    className="block text-gray-700 hover:text-primary-purple transition-colors duration-200 font-medium"
-                    onClick={() => setIsOpen(false)}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ 
-                      duration: 0.3, 
-                      delay: index * 0.1,
-                      ease: 'easeOut' 
-                    }}
-                  >
-                    {item.label}
-                  </motion.a>
-                ))}
-                <div className="pt-4">
-                  <Button 
-                    variant="primary" 
-                    size="sm" 
-                    href="/contact"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Get in Touch
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Right: Hamburger Icon */}
+        <button
+          className="flex items-center justify-center rounded-lg"
+          style={{ background: 'none', border: 'none', outline: 'none', cursor: 'pointer', padding: '1rem' }}
+          aria-label="Open menu"
+          onClick={() => setSidebarOpen(true)}
+        >
+          <LucideMenu size={32} color="#b19cd9" strokeWidth={2.5} />
+        </button>
       </div>
-    </motion.header>
+      <Sidebar
+        visible={sidebarOpen}
+        position="right"
+        onHide={() => setSidebarOpen(false)}
+        className="p-sidebar-lg"
+        style={{
+          background: 'rgba(255,255,255,0.95)',
+          backdropFilter: 'blur(10px)',
+          borderLeft: '2px solid #b19cd9',
+          boxShadow: '-4px 0 20px rgba(0,0,0,0.1)',
+        }}
+        header={
+          <div className="flex items-center space-x-3 p-4">
+            <Image
+              src="/icons/main-icon.png"
+              alt="Safiyah Logo"
+              width={32}
+              height={32}
+              className="rounded-full"
+              style={{ padding: '0.5rem' }}
+            />
+            <span className="text-lg font-bold" style={{ color: '#2d3748' }}>
+              Menu
+            </span>
+          </div>
+        }
+      >
+        <div className="p-4">
+          <PanelMenu
+            model={menuItems}
+            className="w-full"
+            style={{
+              background: 'none',
+              border: 'none',
+              boxShadow: 'none',
+            }}
+          />
+          <div className="mt-8 pt-6 border-t border-gray-200">
+            <Link href="/contact" className="no-underline">
+              <Button
+                label="Get in Touch"
+                icon="pi pi-envelope"
+                className="p-button-rounded w-full"
+                style={{
+                  background: 'linear-gradient(90deg, #ffb3d9 0%, #b19cd9 100%)',
+                  color: '#fff',
+                  border: 'none',
+                  fontWeight: 600,
+                  boxShadow: '0 2px 8px 0 rgba(255,158,205,0.10)',
+                  padding: '0.75rem 1.5rem',
+                  fontSize: '1rem',
+                  borderRadius: '1.5rem',
+                }}
+                onClick={() => setSidebarOpen(false)}
+              />
+            </Link>
+          </div>
+        </div>
+      </Sidebar>
+    </header>
   );
 };
 

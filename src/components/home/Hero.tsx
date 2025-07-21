@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start mt-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -147,7 +147,7 @@ const Hero: React.FC = () => {
             <div className="relative">
               {/* Main Card */}
               <motion.div
-                className="w-80 h-96 bg-gradient-to-br from-primary-purple to-secondary-purple rounded-3xl shadow-2xl relative overflow-hidden"
+                className="w-80 h-96 bg-gradient-to-br from-primary-purple to-secondary-purple rounded-3xl shadow-2xl relative overflow-hidden mb-8"
                 whileHover={{ scale: 1.05, rotateY: 5 }}
                 transition={{ duration: 0.3 }}
               >
@@ -163,7 +163,7 @@ const Hero: React.FC = () => {
 
               {/* Floating Cards */}
               <motion.div
-                className="absolute -top-8 -left-8 w-32 h-32 bg-white rounded-2xl shadow-lg flex items-center justify-center"
+                className="absolute -top-8 -left-8 w-32 h-32 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-8"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}

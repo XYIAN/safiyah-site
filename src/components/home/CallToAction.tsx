@@ -13,7 +13,7 @@ const CallToAction: React.FC = () => {
           Whether you&apos;re looking for ADHD assessment, emotional support, or therapeutic interventions, 
           I&apos;m here to help you on your mental health journey.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-8 justify-center mt-8">
           <Button variant="primary" size="lg" href="/contact">
             Schedule a Consultation
           </Button>

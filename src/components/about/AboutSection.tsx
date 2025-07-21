@@ -15,17 +15,15 @@ const AboutSection: React.FC = () => {
           <div>
             <h2 className="text-3xl font-bold mb-6">Professional Summary</h2>
             <p className="text-lg text-gray-600 mb-6">
-              I am a qualified mental health professional with over 5 years of experience 
-              in clinical psychology, specializing in ADHD assessment and therapeutic interventions. 
-              My work focuses on providing comprehensive mental health support to children, 
-              adolescents, and adults.
+              Passionate about understanding and supporting individuals through psychological challenges, I am dedicated to delivering evidence-based interventions to improve mental well-being. With a strong academic foundation—BSc in Psychology and MSc in Neuroscience of Mental Health—I have developed expertise in psychological assessments, therapeutic approaches (CBT, mindfulness), and clinical research.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              My approach combines evidence-based therapeutic techniques with a deep understanding 
-              of individual needs, ensuring that each client receives personalized care that 
-              addresses their unique challenges and goals.
+              My experience spans diverse mental health settings, from working as an Assistant Psychologist conducting ADHD assessments and risk evaluations to providing direct emotional and behavioral support to children and adolescents in care. I thrive in multidisciplinary environments, collaborating with healthcare professionals to develop personalized treatment strategies.
             </p>
-            <Button variant="primary" href="/experience">
+            <p className="text-lg text-gray-600 mb-6">
+              Committed to lifelong learning, I actively engage in professional development, staying updated on the latest advancements in clinical psychology. I am eager to contribute to innovative, client-centered mental health care and advocate for accessible psychological support for all.
+            </p>
+            <Button variant="primary" href="/experience" className="mt-8">
               View My Experience
             </Button>
           </div>

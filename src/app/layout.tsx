@@ -5,6 +5,7 @@ import 'primereact/resources/themes/lara-light-pink/theme.css'
 import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 import { PrimeReactProvider } from 'primereact/api'
+import { Card } from 'primereact/card'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
@@ -91,8 +92,23 @@ export default function RootLayout({
         <PrimeReactProvider>
           <div className="parallax-background"></div>
           <Header />
-          <main className="pt-16 relative z-10">
-            {children}
+          <main className="pt-16 relative z-10 flex justify-center min-h-screen">
+            <Card
+              className="main-content-card"
+              style={{
+                width: '100%',
+                maxWidth: 1200,
+                margin: '2rem auto',
+                background: 'rgba(255,255,255,0.65)',
+                border: '2px solid #ffb3d9',
+                borderRadius: '2rem',
+                boxShadow: '0 8px 32px 0 rgba(177,156,217,0.10)',
+                padding: '2.5rem 2rem',
+                backdropFilter: 'blur(8px)',
+              }}
+            >
+              {children}
+            </Card>
           </main>
           <Footer />
         </PrimeReactProvider>

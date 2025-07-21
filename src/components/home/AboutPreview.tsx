@@ -40,7 +40,7 @@ const AboutPreview: React.FC = () => {
         titleClassName="text-4xl font-bold mb-4"
       />
 
-      <GridLayout cols={{ sm: 1, md: 2, lg: 4 }}>
+      <GridLayout cols={{ sm: 1, md: 2, lg: 4 }} gap="gap-8">
         {services.map((service, index) => (
           <IconCard
             key={index}
@@ -49,6 +49,7 @@ const AboutPreview: React.FC = () => {
             description={service.description}
             titleClassName="text-xl font-semibold mb-2"
             descriptionClassName="text-gray-600"
+            className="mb-8"
           />
         ))}
       </GridLayout>
