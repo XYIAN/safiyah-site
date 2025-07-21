@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use 'variables' as *;
 
 // Reset and base styles
 * {
@@ -18,13 +18,13 @@ body {
 }
 
 body {
-  background-color: $bg-primary;
+  background-color: #b19cd9;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/bg-high-res.png");
+  background-image: url('/bg-high-res.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -183,22 +183,14 @@ strong {
   }
 
   &--primary {
-    background: linear-gradient(
-      135deg,
-      var(--primary-pink),
-      var(--primary-purple)
-    );
+    background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
     color: white;
     box-shadow: var(--shadow-md);
 
     &:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-lg);
-      background: linear-gradient(
-        135deg,
-        var(--primary-pink-dark),
-        var(--primary-purple-dark)
-      );
+      background: linear-gradient(135deg, var(--primary-pink-dark), var(--primary-purple-dark));
     }
   }
 
@@ -244,11 +236,7 @@ strong {
   }
 
   &--glossy {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.6)
-    );
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
@@ -265,11 +253,7 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(
-      135deg,
-      rgba(248, 240, 255, 0.6) 0%,
-      rgba(255, 255, 255, 0.7) 100%
-    );
+    background: linear-gradient(135deg, rgba(248, 240, 255, 0.6) 0%, rgba(255, 255, 255, 0.7) 100%);
     backdrop-filter: blur(10px);
   }
 
@@ -278,17 +262,17 @@ strong {
     backdrop-filter: blur(5px);
   }
 
-  &[data-background="primary"] {
+  &[data-background='primary'] {
     background: rgba(254, 247, 247, 0.6);
     backdrop-filter: blur(5px);
   }
 
-  &[data-background="secondary"] {
+  &[data-background='secondary'] {
     background: rgba(248, 240, 255, 0.6);
     backdrop-filter: blur(5px);
   }
 
-  &[data-background="accent"] {
+  &[data-background='accent'] {
     background: rgba(255, 240, 245, 0.6);
     backdrop-filter: blur(5px);
   }
@@ -454,22 +438,14 @@ html {
 }
 
 .p-button {
-  background: linear-gradient(
-    135deg,
-    var(--primary-pink),
-    var(--primary-purple)
-  );
+  background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
   border: none;
   border-radius: $border-radius-lg;
   font-weight: $font-weight-medium;
   transition: all $transition-normal;
 
   &:hover {
-    background: linear-gradient(
-      135deg,
-      var(--primary-pink-dark),
-      var(--primary-purple-dark)
-    );
+    background: linear-gradient(135deg, var(--primary-pink-dark), var(--primary-purple-dark));
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
   }

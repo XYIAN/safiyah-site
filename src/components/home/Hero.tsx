@@ -114,6 +114,8 @@ const Hero: React.FC = () => {
                   borderRadius: '50%',
                   boxShadow: '0 4px 24px 0 rgba(177,156,217,0.18)',
                   border: '4px solid #fff',
+                  background: '#fff',
+                  opacity: 1,
                 }}
               />
             </motion.div>

@@ -13,23 +13,23 @@ const AboutPreview: React.FC = () => {
     {
       icon: Brain,
       title: 'ADHD Assessment',
-      description: 'Comprehensive evaluation and diagnosis of ADHD in children and adults'
+      description: 'Comprehensive evaluation and diagnosis of ADHD in children and adults',
     },
     {
       icon: Heart,
       title: 'Emotional Support',
-      description: 'Compassionate therapeutic support for emotional well-being and mental health'
+      description: 'Compassionate therapeutic support for emotional well-being and mental health',
     },
     {
       icon: Users,
       title: 'Therapeutic Interventions',
-      description: 'Evidence-based therapeutic approaches tailored to individual needs'
+      description: 'Evidence-based therapeutic approaches tailored to individual needs',
     },
     {
       icon: Award,
       title: 'Clinical Research',
-      description: 'Contributing to mental health research and advancing clinical practices'
-    }
+      description: 'Contributing to mental health research and advancing clinical practices',
+    },
   ];
 
   return (
@@ -63,4 +63,4 @@ const AboutPreview: React.FC = () => {
   );
 };
 
-export default AboutPreview; 
+export default AboutPreview;
