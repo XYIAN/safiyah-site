@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -21,22 +20,16 @@ const Container: React.FC<ContainerProps> = ({
     lg: 'max-w-screen-lg',
     xl: 'max-w-screen-xl',
     '2xl': 'max-w-screen-2xl',
-    full: 'max-w-full'
+    full: 'max-w-full',
   };
 
   const classes = `container mx-auto px-4 ${maxWidthClasses[maxWidth]} ${className}`;
 
   return (
-    <motion.div
-      className={classes}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-      {...props}
-    >
+    <div className={classes} {...props}>
       {children}
-    </motion.div>
+    </div>
   );
 };
 
-export default Container; 
+export default Container;

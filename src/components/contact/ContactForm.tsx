@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { ContactForm as ContactFormType } from '@/types';
 import Button from '@/components/common/Button';
@@ -13,7 +12,7 @@ const ContactForm: React.FC = () => {
     subject: '',
     message: '',
     organization: '',
-    phone: ''
+    phone: '',
   });
 
   const [errors, setErrors] = useState<Partial<ContactFormType>>({});
@@ -47,7 +46,7 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -55,7 +54,7 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -68,19 +67,21 @@ const ContactForm: React.FC = () => {
         subject: '',
         message: '',
         organization: '',
-        phone: ''
+        phone: '',
       });
       setIsSubmitted(false);
     }, 3000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
     // Clear error when user starts typing
     if (errors[name as keyof ContactFormType]) {
-      setErrors(prev => ({ ...prev, [name]: undefined }));
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
   };
 
@@ -89,59 +90,47 @@ const ContactForm: React.FC = () => {
       icon: Mail,
       title: 'Email',
       content: 'safiyah.sohail@example.com',
-      link: 'mailto:safiyah.sohail@example.com'
+      link: 'mailto:safiyah.sohail@example.com',
     },
     {
       icon: Phone,
       title: 'Phone',
       content: '+44 123 456 789',
-      link: 'tel:+44123456789'
+      link: 'tel:+44123456789',
     },
     {
       icon: MapPin,
       title: 'Location',
       content: 'London, United Kingdom',
-      link: null
+      link: null,
     },
     {
       icon: Clock,
       title: 'Office Hours',
       content: 'Mon-Fri: 9:00 AM - 6:00 PM',
-      link: null
-    }
+      link: null,
+    },
   ];
 
   if (isSubmitted) {
     return (
-      <motion.div
-        className="text-center py-12"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="text-center py-12">
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
         <p className="text-gray-600 mb-4">
           Your message has been sent successfully. I&apos;ll get back to you within 24 hours.
         </p>
-        <Button 
-          variant="primary" 
-          onClick={() => setIsSubmitted(false)}
-        >
+        <Button variant="primary" onClick={() => setIsSubmitted(false)}>
           Send Another Message
         </Button>
-      </motion.div>
+      </div>
     );
   }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
       {/* Contact Form */}
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+      <div>
         <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -160,9 +149,7 @@ const ContactForm: React.FC = () => {
                 }`}
                 placeholder="Your full name"
               />
-              {errors.name && (
-                <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-              )}
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
 
             <div>
@@ -180,15 +167,16 @@ const ContactForm: React.FC = () => {
                 }`}
                 placeholder="your.email@example.com"
               />
-              {errors.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-              )}
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="organization"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Organization
               </label>
               <input
@@ -239,9 +227,7 @@ const ContactForm: React.FC = () => {
               <option value="Speaking Engagement">Speaking Engagement</option>
               <option value="Other">Other</option>
             </select>
-            {errors.subject && (
-              <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
-            )}
+            {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
           </div>
 
           <div>
@@ -259,9 +245,7 @@ const ContactForm: React.FC = () => {
               }`}
               placeholder="Please describe your inquiry or how I can help you..."
             />
-            {errors.message && (
-              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-            )}
+            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
           </div>
 
           <Button
@@ -284,30 +268,20 @@ const ContactForm: React.FC = () => {
             )}
           </Button>
         </form>
-      </motion.div>
+      </div>
 
       {/* Contact Information */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
+      <div>
         <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
         <p className="text-gray-600 mb-8">
-          I&apos;m here to help with your mental health needs. Whether you&apos;re looking for 
-          ADHD assessment, therapeutic support, or have questions about my services, 
-          please don&apos;t hesitate to reach out.
+          I&apos;m here to help with your mental health needs. Whether you&apos;re looking for ADHD
+          assessment, therapeutic support, or have questions about my services, please don&apos;t
+          hesitate to reach out.
         </p>
 
         <div className="space-y-6">
           {contactInfo.map((info, index) => (
-            <motion.div
-              key={info.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-start space-x-4"
-            >
+            <div key={info.title} className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-primary-purple/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <info.icon className="w-6 h-6 text-primary-purple" />
               </div>
@@ -324,20 +298,20 @@ const ContactForm: React.FC = () => {
                   <p className="text-gray-600">{info.content}</p>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         <div className="mt-8 p-6 bg-primary-purple/5 rounded-lg">
           <h4 className="font-semibold text-gray-900 mb-2">Response Time</h4>
           <p className="text-gray-600 text-sm">
-            I typically respond to all inquiries within 24 hours during business days. 
-            For urgent matters, please call directly.
+            I typically respond to all inquiries within 24 hours during business days. For urgent
+            matters, please call directly.
           </p>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
 
-export default ContactForm; 
+export default ContactForm;

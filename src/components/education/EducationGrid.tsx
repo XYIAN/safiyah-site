@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { GraduationCap, Award, Calendar, MapPin, ExternalLink } from 'lucide-react';
 import { Education, Certification } from '@/types';
 import Card from '@/components/common/Card';
@@ -21,14 +20,14 @@ const EducationGrid: React.FC = () => {
         'Evidence-Based Interventions',
         'Research Methods in Psychology',
         'Child and Adolescent Psychology',
-        'Neuropsychological Assessment'
+        'Neuropsychological Assessment',
       ],
       honors: [
-        'Dean\'s List for Academic Excellence',
+        "Dean's List for Academic Excellence",
         'Outstanding Research Award',
-        'Clinical Practice Excellence Award'
+        'Clinical Practice Excellence Award',
       ],
-      logo: '/oxford-logo.png'
+      logo: '/oxford-logo.png',
     },
     {
       id: '2',
@@ -43,19 +42,19 @@ const EducationGrid: React.FC = () => {
         'Developmental Psychology',
         'Research Design and Statistics',
         'Clinical Psychology Foundations',
-        'Mental Health and Wellbeing'
+        'Mental Health and Wellbeing',
       ],
       honors: [
         'Distinction in Research Project',
         'Academic Merit Scholarship',
-        'Student Representative for Psychology Department'
+        'Student Representative for Psychology Department',
       ],
-      logo: '/ucl-logo.png'
+      logo: '/ucl-logo.png',
     },
     {
       id: '3',
       degree: 'Bachelor of Science in Psychology',
-      institution: 'King\'s College London',
+      institution: "King's College London",
       location: 'London, UK',
       startDate: '2012',
       endDate: '2015',
@@ -65,15 +64,15 @@ const EducationGrid: React.FC = () => {
         'Biological Psychology',
         'Social Psychology',
         'Research Methods',
-        'Statistics for Psychology'
+        'Statistics for Psychology',
       ],
       honors: [
-        'Dean\'s List for Academic Excellence',
+        "Dean's List for Academic Excellence",
         'Best Final Year Project Award',
-        'Psychology Society President'
+        'Psychology Society President',
       ],
-      logo: '/kcl-logo.png'
-    }
+      logo: '/kcl-logo.png',
+    },
   ];
 
   const certifications: Certification[] = [
@@ -84,7 +83,7 @@ const EducationGrid: React.FC = () => {
       issueDate: '2021',
       credentialId: 'BPS-ADHD-2021-001',
       credentialUrl: 'https://www.bps.org.uk',
-      logo: '/bps-logo.png'
+      logo: '/bps-logo.png',
     },
     {
       id: '2',
@@ -93,7 +92,7 @@ const EducationGrid: React.FC = () => {
       issueDate: '2020',
       credentialId: 'BECK-CBT-2020-045',
       credentialUrl: 'https://beckinstitute.org',
-      logo: '/beck-logo.png'
+      logo: '/beck-logo.png',
     },
     {
       id: '3',
@@ -102,7 +101,7 @@ const EducationGrid: React.FC = () => {
       issueDate: '2019',
       credentialId: 'AFT-FT-2019-023',
       credentialUrl: 'https://www.aft.org.uk',
-      logo: '/aft-logo.png'
+      logo: '/aft-logo.png',
     },
     {
       id: '4',
@@ -111,8 +110,8 @@ const EducationGrid: React.FC = () => {
       issueDate: '2018',
       credentialId: 'CFM-MBSR-2018-012',
       credentialUrl: 'https://www.umassmed.edu/cfm',
-      logo: '/cfm-logo.png'
-    }
+      logo: '/cfm-logo.png',
+    },
   ];
 
   return (
@@ -122,28 +121,20 @@ const EducationGrid: React.FC = () => {
         <h2 className="text-3xl font-bold mb-8 text-center">Academic Qualifications</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {education.map((edu, index) => (
-            <motion.div
-              key={edu.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
+            <div key={edu.id}>
               <Card className="h-full">
                 <div className="flex items-start space-x-4">
                   {/* Institution Logo Placeholder */}
                   <div className="w-16 h-16 bg-primary-purple/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <GraduationCap className="w-8 h-8 text-primary-purple" />
                   </div>
-                  
+
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {edu.degree}
-                    </h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{edu.degree}</h3>
                     <p className="text-lg font-semibold text-primary-purple mb-2">
                       {edu.institution}
                     </p>
-                    
+
                     <div className="flex items-center space-x-4 text-sm text-gray-600 mb-3">
                       <div className="flex items-center">
                         <MapPin size={14} className="mr-1" />
@@ -191,7 +182,7 @@ const EducationGrid: React.FC = () => {
                   </div>
                 </div>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -201,29 +192,19 @@ const EducationGrid: React.FC = () => {
         <h2 className="text-3xl font-bold mb-8 text-center">Professional Certifications</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
-            <motion.div
-              key={cert.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
+            <div key={cert.id}>
               <Card className="text-center h-full">
                 {/* Certification Logo Placeholder */}
                 <div className="w-16 h-16 bg-primary-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-primary-purple" />
                 </div>
-                
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {cert.name}
-                </h3>
+
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{cert.name}</h3>
                 <p className="text-sm text-primary-purple font-medium mb-2">
                   {cert.issuingOrganization}
                 </p>
-                <p className="text-sm text-gray-600 mb-3">
-                  Issued: {cert.issueDate}
-                </p>
-                
+                <p className="text-sm text-gray-600 mb-3">Issued: {cert.issueDate}</p>
+
                 {cert.credentialUrl && (
                   <a
                     href={cert.credentialUrl}
@@ -236,7 +217,7 @@ const EducationGrid: React.FC = () => {
                   </a>
                 )}
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -244,4 +225,4 @@ const EducationGrid: React.FC = () => {
   );
 };
 
-export default EducationGrid; 
+export default EducationGrid;
