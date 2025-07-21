@@ -10,6 +10,8 @@ A modern, responsive portfolio website for Safiyah Sohail, a mental health profe
 - **TypeScript**: Full type safety and better development experience
 - **SEO Optimized**: Built with Next.js 15+ and proper meta tags
 - **Performance**: Fast loading with static generation and optimization
+- **Parallax Background**: Beautiful animated background with custom image
+- **Custom Icon**: Professional branding with custom favicon
 
 ## 🏗️ Project Structure
 
@@ -23,6 +25,7 @@ src/
 │   └── contact/page.tsx   # Contact page
 ├── components/            # React components
 │   ├── common/           # Reusable UI components
+│   │   ├── index.ts      # Common component exports
 │   │   ├── Button.tsx
 │   │   ├── Card.tsx
 │   │   ├── Section.tsx
@@ -35,32 +38,38 @@ src/
 │   │   ├── PageHero.tsx
 │   │   └── PageCallToAction.tsx
 │   ├── layout/           # Layout components
+│   │   ├── index.ts      # Layout component exports
 │   │   ├── Header.tsx
 │   │   └── Footer.tsx
 │   ├── home/             # Home page components
+│   │   ├── index.ts      # Home component exports
 │   │   ├── Hero.tsx
 │   │   ├── AboutPreview.tsx
 │   │   ├── StatsSection.tsx
 │   │   └── CallToAction.tsx
 │   ├── about/            # About page components
+│   │   ├── index.ts      # About component exports
 │   │   └── AboutSection.tsx
 │   ├── experience/       # Experience page components
+│   │   ├── index.ts      # Experience component exports
 │   │   ├── ExperienceTimeline.tsx
 │   │   ├── KeyAchievements.tsx
 │   │   ├── Specializations.tsx
 │   │   └── ProfessionalDevelopment.tsx
 │   ├── education/        # Education page components
+│   │   ├── index.ts      # Education component exports
 │   │   ├── EducationGrid.tsx
 │   │   ├── AcademicHighlights.tsx
 │   │   ├── ResearchFocus.tsx
 │   │   └── OngoingDevelopment.tsx
 │   ├── contact/          # Contact page components
+│   │   ├── index.ts      # Contact component exports
 │   │   ├── ContactForm.tsx
 │   │   ├── ContactFormSection.tsx
 │   │   ├── ServicesOverview.tsx
 │   │   ├── FAQSection.tsx
 │   │   └── LocationHours.tsx
-│   └── index.ts          # Barrel exports
+│   └── index.ts          # Main barrel exports
 ├── styles/               # Global styles
 │   └── globals.scss
 └── types/                # TypeScript type definitions
@@ -121,7 +130,31 @@ npm run build
 
 ## 📝 Changelog
 
-### [Latest] - Complete Component Extraction & Consolidation
+### [Latest] - Nested Index.ts Export Structure & Visual Enhancements
+- **✅ NESTED EXPORTS**: Implemented clean nested index.ts export structure
+- **✅ PARALLAX BACKGROUND**: Added beautiful animated background with bg1.png
+- **✅ CUSTOM ICON**: Integrated main-icon.png as favicon and app icons
+- **✅ RESPONSIVE OPTIMIZATION**: Mobile-optimized parallax with performance considerations
+- **✅ VISUAL ENHANCEMENTS**: Backdrop blur effects and improved layering
+- **✅ CLEAN ARCHITECTURE**: Better component organization with barrel exports
+
+#### New Export Structure:
+- **src/components/common/index.ts** - Exports all common components
+- **src/components/layout/index.ts** - Exports Header and Footer
+- **src/components/home/index.ts** - Exports Hero, AboutPreview, StatsSection, CallToAction
+- **src/components/about/index.ts** - Exports AboutSection
+- **src/components/experience/index.ts** - Exports ExperienceTimeline, KeyAchievements, Specializations, ProfessionalDevelopment
+- **src/components/education/index.ts** - Exports EducationGrid, AcademicHighlights, ResearchFocus, OngoingDevelopment
+- **src/components/contact/index.ts** - Exports ContactForm, ContactFormSection, ServicesOverview, FAQSection, LocationHours
+
+#### Visual Enhancements:
+- **Parallax Background**: Fixed positioning with subtle floating animation
+- **Custom Icon**: Professional branding with favicon integration
+- **Backdrop Blur**: Applied to sections and cards for depth
+- **Responsive Design**: Optimized for desktop, tablet, and mobile
+- **Performance**: Animation disabled on mobile for better performance
+
+### [Previous] - Complete Component Extraction & Consolidation
 - **✅ FULLY EXTRACTED**: All inline JSX blocks converted to functional components
 - **✅ REUSABLE COMPONENTS**: Created 7 new reusable components in `/common`
 - **✅ PAGE COMPONENTS**: Created 5 new page-specific components
@@ -144,7 +177,7 @@ npm run build
 - **Education**: Uses PageHero, AcademicHighlights, ResearchFocus, OngoingDevelopment, PageCallToAction
 - **Contact**: Uses PageHero, ContactFormSection, ServicesOverview, FAQSection, LocationHours, PageCallToAction
 
-### Previous Updates
+### [Earlier] - Initial Portfolio Setup
 - Initial portfolio setup with Next.js 15+
 - Responsive design implementation
 - SEO optimization
@@ -166,6 +199,7 @@ npm run build
 - **Performance**: Optimized loading and rendering
 - **Accessibility**: WCAG compliant design
 - **SEO**: Search engine optimized content
+- **Visual Appeal**: Parallax background with custom branding
 
 ## 📞 Contact
 
