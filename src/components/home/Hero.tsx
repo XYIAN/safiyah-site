@@ -64,155 +64,125 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-4">
         <div className="flex flex-column align-items-center justify-content-center min-h-screen py-6 gap-6">
-          <Card className="w-full max-w-30rem mx-auto glossy-hero-card" style={{
-            background: 'rgba(255,255,255,0.75)',
-            border: '1.5px solid #e8d5f0',
-            borderRadius: '2rem',
-            boxShadow: '0 8px 32px 0 rgba(177,156,217,0.18)',
-            padding: '3rem 2rem',
-            backdropFilter: 'blur(12px)',
-            position: 'relative',
-            zIndex: 2,
-          }}>
-            {/* Left Content (now top) */}
+          {/* Left Content (now top) */}
+          <motion.div
+            className="w-full text-center mb-4"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
             <motion.div
-              className="w-full text-center mb-4"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="inline-flex align-items-center gap-2 bg-primary-purple/10 text-primary-purple px-4 py-2 border-round text-sm font-medium mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <motion.div
-                className="inline-flex align-items-center gap-2 bg-primary-purple/10 text-primary-purple px-4 py-2 border-round text-sm font-medium mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <Heart size={16} />
-                <span>Mental Health Professional</span>
-              </motion.div>
-
-              <motion.h1
-                className="text-5xl md:text-7xl font-bold mb-4 line-height-1"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
-                <span className="text-gray-900">Safiyah</span>
-                <br />
-                <span className="text-primary-purple">Sohail</span>
-              </motion.h1>
-
-              <motion.p
-                className="text-xl md:text-2xl text-gray-600 mb-6 max-w-30rem mx-auto"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                Specializing in ADHD assessment, emotional support, and therapeutic interventions. 
-                Dedicated to providing compassionate mental health care and clinical research.
-              </motion.p>
-
-              <motion.div
-                className="flex flex-column sm:flex-row gap-4 justify-content-center mt-4"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-              >
-                <Button variant="primary" size="lg" href="/contact">
-                  Get in Touch
-                </Button>
-                <Button variant="secondary" size="lg" href="/about">
-                  Learn More
-                </Button>
-              </motion.div>
-
-              {/* Stats */}
-              <motion.div
-                className="flex justify-content-center gap-6 mt-6"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-purple">5+</div>
-                  <div className="text-sm text-gray-600">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-purple">200+</div>
-                  <div className="text-sm text-gray-600">Clients Helped</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-purple">15+</div>
-                  <div className="text-sm text-gray-600">Research Papers</div>
-                </div>
-              </motion.div>
+              <Heart size={16} />
+              <span>Mental Health Professional</span>
             </motion.div>
 
-            {/* Visual Elements (now below text) */}
-            <motion.div
-              className="w-full flex justify-content-center mt-4"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+            <motion.h1
+              className="text-5xl md:text-7xl font-bold mb-4 line-height-1"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <span className="text-gray-900">Safiyah</span>
+              <br />
+              <span className="text-primary-purple">Sohail</span>
+            </motion.h1>
+
+            <motion.p
+              className="text-xl md:text-2xl text-gray-600 mb-6 max-w-30rem mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <div className="relative">
-                {/* Main Card */}
-                <motion.div
-                  className="w-20rem h-24rem bg-gradient-to-br from-primary-purple to-secondary-purple border-round-3xl shadow-2xl relative overflow-hidden mb-4"
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
-                  <div className="absolute inset-0 flex align-items-center justify-content-center">
-                    <div className="text-center text-white">
-                      <Brain size={80} className="mx-auto mb-4" />
-                      <h3 className="text-2xl font-bold mb-2">Clinical Psychology</h3>
-                      <p className="text-white/80">ADHD Specialist</p>
-                    </div>
-                  </div>
-                </motion.div>
+              Specializing in ADHD assessment, emotional support, and therapeutic interventions. 
+              Dedicated to providing compassionate mental health care and clinical research.
+            </motion.p>
 
-                {/* Floating Cards */}
-                <motion.div
-                  className="absolute -top-3 -left-3 w-8rem h-8rem bg-white border-round-2xl shadow-lg flex align-items-center justify-content-center mb-4"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                >
-                  <Users size={40} className="text-primary-purple" />
-                </motion.div>
+            <motion.div
+              className="flex flex-column sm:flex-row gap-4 justify-content-center mt-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              <Button variant="primary" size="lg" href="/contact">
+                Get in Touch
+              </Button>
+              <Button variant="secondary" size="lg" href="/about">
+                Learn More
+              </Button>
+            </motion.div>
 
-                <motion.div
-                  className="absolute -bottom-3 -right-3 w-7rem h-7rem bg-white border-round-2xl shadow-lg flex align-items-center justify-content-center"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 1 }}
-                  whileHover={{ scale: 1.1, rotate: -5 }}
-                >
-                  <Heart size={32} className="text-secondary-purple" />
-                </motion.div>
+            {/* Stats */}
+            <motion.div
+              className="flex justify-content-center gap-6 mt-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary-purple">5+</div>
+                <div className="text-sm text-gray-600">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary-purple">200+</div>
+                <div className="text-sm text-gray-600">Clients Helped</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary-purple">15+</div>
+                <div className="text-sm text-gray-600">Research Papers</div>
               </div>
             </motion.div>
-          </Card>
+          </motion.div>
 
-          {/* Scroll Indicator */}
+          {/* Visual Elements (now below text) */}
           <motion.div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            className="w-full flex justify-content-center mt-4"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <motion.button
-              onClick={scrollToContent}
-              className="p-2 border-round bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <ChevronDown size={24} className="text-gray-700" />
-            </motion.button>
+            <div className="relative">
+              {/* Main Card */}
+              <motion.div
+                className="w-20rem h-24rem bg-gradient-to-br from-primary-purple to-secondary-purple border-round-3xl shadow-2xl relative overflow-hidden mb-4"
+                whileHover={{ scale: 1.05, rotateY: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
+                <div className="absolute inset-0 flex align-items-center justify-content-center">
+                  <div className="text-center text-white">
+                    <Brain size={80} className="mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold mb-2">Clinical Psychology</h3>
+                    <p className="text-white/80">ADHD Specialist</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Floating Cards */}
+              <motion.div
+                className="absolute -top-3 -left-3 w-8rem h-8rem bg-white border-round-2xl shadow-lg flex align-items-center justify-content-center mb-4"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                whileHover={{ scale: 1.1, rotate: 5 }}
+              >
+                <Users size={40} className="text-primary-purple" />
+              </motion.div>
+
+              <motion.div
+                className="absolute -bottom-3 -right-3 w-7rem h-7rem bg-white border-round-2xl shadow-lg flex align-items-center justify-content-center"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 1 }}
+                whileHover={{ scale: 1.1, rotate: -5 }}
+              >
+                <Heart size={32} className="text-secondary-purple" />
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
