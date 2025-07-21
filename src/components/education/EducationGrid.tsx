@@ -120,7 +120,7 @@ const EducationGrid: React.FC = () => {
       <div>
         <h2 className="text-3xl font-bold mb-8 text-center">Academic Qualifications</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {education.map((edu, index) => (
+          {education.map((edu) => (
             <div key={edu.id}>
               <Card className="h-full">
                 <div className="flex items-start space-x-4">
@@ -191,7 +191,7 @@ const EducationGrid: React.FC = () => {
       <div>
         <h2 className="text-3xl font-bold mb-8 text-center">Professional Certifications</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {certifications.map((cert, index) => (
+          {certifications.map((cert) => (
             <div key={cert.id}>
               <Card className="text-center h-full">
                 {/* Certification Logo Placeholder */}

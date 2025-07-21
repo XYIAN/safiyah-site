@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Heart, Brain, Users } from 'lucide-react';
+import { Heart, Brain } from 'lucide-react';
 import Button from '@/components/common/Button';
 
 const Hero: React.FC = () => {

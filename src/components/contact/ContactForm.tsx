@@ -280,7 +280,7 @@ const ContactForm: React.FC = () => {
         </p>
 
         <div className="space-y-6">
-          {contactInfo.map((info, index) => (
+          {contactInfo.map((info) => (
             <div key={info.title} className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-primary-purple/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <info.icon className="w-6 h-6 text-primary-purple" />

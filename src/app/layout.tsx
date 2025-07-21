@@ -1,21 +1,22 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import '@/styles/globals.scss'
-import 'primereact/resources/themes/lara-light-pink/theme.css'
-import 'primereact/resources/primereact.min.css'
-import 'primeicons/primeicons.css'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import '@/styles/globals.scss';
+import 'primereact/resources/themes/lara-light-pink/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
-import { PrimeReactProvider } from 'primereact/api'
-import { Card } from 'primereact/card'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import { PrimeReactProvider } from 'primereact/api';
+import { Card } from 'primereact/card';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import ParticlesOverlay from '@/components/common/ParticlesOverlay';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Safiyah Sohail - Mental Health Professional & ADHD Specialist',
-  description: 'Safiyah Sohail is a mental health professional specializing in ADHD assessment, emotional support, and therapeutic interventions. Based in London, UK.',
+  description:
+    'Safiyah Sohail is a mental health professional specializing in ADHD assessment, emotional support, and therapeutic interventions. Based in London, UK.',
   keywords: [
     'Safiyah Sohail',
     'Psychologist',
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     'ADHD Assessment',
     'Therapeutic Interventions',
     'Mental Health Care',
-    'London Psychologist'
+    'London Psychologist',
   ],
   authors: [{ name: 'Safiyah Sohail' }],
   creator: 'Safiyah Sohail',
@@ -46,7 +47,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Safiyah Sohail - Mental Health Professional & ADHD Specialist',
-    description: 'Specializing in ADHD assessment, emotional support, and therapeutic interventions. Dedicated to providing compassionate mental health care and clinical research.',
+    description:
+      'Specializing in ADHD assessment, emotional support, and therapeutic interventions. Dedicated to providing compassionate mental health care and clinical research.',
     url: 'https://safiyah-sohail.com',
     siteName: 'Safiyah Sohail Portfolio',
     images: [
@@ -63,7 +65,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Safiyah Sohail - Mental Health Professional & ADHD Specialist',
-    description: 'Specializing in ADHD assessment, emotional support, and therapeutic interventions.',
+    description:
+      'Specializing in ADHD assessment, emotional support, and therapeutic interventions.',
     images: ['/og-image.jpg'],
     creator: '@safiyah_sohail',
   },
@@ -81,13 +84,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
-}
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -95,7 +94,7 @@ export default function RootLayout({
           <Header />
           <ParticlesOverlay />
           <div className="parallax-background"></div>
-          <main className="pt-16 relative z-10 flex justify-center min-h-screen">
+          <main className="pt-20 relative z-10 flex justify-center min-h-screen">
             <Card
               className="main-content-card"
               style={{
@@ -117,5 +116,5 @@ export default function RootLayout({
         </PrimeReactProvider>
       </body>
     </html>
-  )
+  );
 }

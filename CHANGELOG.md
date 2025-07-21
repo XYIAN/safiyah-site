@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.3] - 2024-06-09
+
+### Changed
+
+- Removed all unused variables and imports across the codebase
+- Cleaned up all linter warnings (except Next.js <img> warning)
+- Verified build and linter are error-free
+
 ## [1.5.2] - 2024-06-09
 
 ### Changed

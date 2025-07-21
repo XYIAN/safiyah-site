@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
               therapeutic interventions.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((link, index) => (
+              {socialLinks.map((link) => (
                 <a
                   key={link.platform}
                   href={link.url}
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
                 { label: 'Experience', href: '/experience' },
                 { label: 'Education', href: '/education' },
                 { label: 'Contact', href: '/contact' },
-              ].map((link, index) => (
+              ].map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
