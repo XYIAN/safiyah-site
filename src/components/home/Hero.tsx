@@ -2,20 +2,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Heart, Brain, Users } from 'lucide-react';
+import { Heart, Brain, Users } from 'lucide-react';
 import Button from '@/components/common/Button';
-import { Card } from 'primereact/card';
 
 const Hero: React.FC = () => {
-  const scrollToContent = () => {
-    const element = document.getElementById('about');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section className="section section--hero relative overflow-hidden">
+    <section className="section section--hero relative overflow-hidden" style={{ background: 'rgba(177,156,217,0.18)', backdropFilter: 'blur(12px)' }}>
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
