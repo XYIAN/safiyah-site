@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   creator: 'Safiyah Sohail',
   publisher: 'Safiyah Sohail',
   icons: {
-    icon: '/icons/main-icon.png',
-    shortcut: '/icons/main-icon.png',
-    apple: '/icons/main-icon.png',
+    icon: '/main-icon.png',
+    shortcut: '/main-icon.png',
+    apple: '/main-icon.png',
   },
   formatDetection: {
     email: false,

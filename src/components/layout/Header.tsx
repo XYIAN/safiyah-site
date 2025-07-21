@@ -45,7 +45,7 @@ const Header: React.FC = () => {
         <div className="flex align-items-center gap-3">
           <div style={{ width: 40, height: 40, position: 'relative' }}>
             <Image
-              src="/icons/main-icon.png"
+              src="/main-icon.png"
               alt="Safiyah Logo"
               fill
               className="rounded-full object-cover"
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
         header={
           <div className="flex items-center space-x-3 p-4">
             <Image
-              src="/icons/main-icon.png"
+              src="/main-icon.png"
               alt="Safiyah Logo"
               width={32}
               height={32}
