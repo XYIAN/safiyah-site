@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.scss'
+import 'primereact/resources/themes/lara-light-pink/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
+import { PrimeReactProvider } from 'primereact/api'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
@@ -84,12 +88,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="parallax-background"></div>
-        <Header />
-        <main className="pt-16 relative z-10">
-          {children}
-        </main>
-        <Footer />
+        <PrimeReactProvider>
+          <div className="parallax-background"></div>
+          <Header />
+          <main className="pt-16 relative z-10">
+            {children}
+          </main>
+          <Footer />
+        </PrimeReactProvider>
       </body>
     </html>
   )
