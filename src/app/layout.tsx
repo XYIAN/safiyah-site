@@ -9,6 +9,7 @@ import { PrimeReactProvider } from 'primereact/api'
 import { Card } from 'primereact/card'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import ParticlesOverlay from '@/components/common/ParticlesOverlay';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -92,6 +93,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <PrimeReactProvider>
           <Header />
+          <ParticlesOverlay />
           <div className="parallax-background"></div>
           <main className="pt-16 relative z-10 flex justify-center min-h-screen">
             <Card
