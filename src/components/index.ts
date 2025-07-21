@@ -8,6 +8,8 @@ export { default as StatsCard } from './common/StatsCard';
 export { default as ContentCard } from './common/ContentCard';
 export { default as SectionHeader } from './common/SectionHeader';
 export { default as GridLayout } from './common/GridLayout';
+export { default as PageHero } from './common/PageHero';
+export { default as PageCallToAction } from './common/PageCallToAction';
 
 // Layout Components
 export { default as Header } from './layout/Header';
@@ -36,4 +38,7 @@ export { default as OngoingDevelopment } from './education/OngoingDevelopment';
 
 // Contact Components
 export { default as ContactForm } from './contact/ContactForm';
-export { default as ServicesOverview } from './contact/ServicesOverview'; 
+export { default as ContactFormSection } from './contact/ContactFormSection';
+export { default as ServicesOverview } from './contact/ServicesOverview';
+export { default as FAQSection } from './contact/FAQSection';
+export { default as LocationHours } from './contact/LocationHours'; 

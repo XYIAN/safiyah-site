@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Brain, Heart, Users, Award, BookOpen, Target, Shield } from 'lucide-react';
 import Section from '@/components/common/Section';
 import Card from '@/components/common/Card';
