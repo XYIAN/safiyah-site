@@ -7,49 +7,52 @@ import Button from '@/components/common/Button';
 
 const Hero: React.FC = () => {
   return (
-    <section className="section section--hero relative overflow-hidden" style={{ background: 'rgba(177,156,217,0.18)', backdropFilter: 'blur(12px)' }}>
+    <section
+      className="section section--hero relative overflow-hidden"
+      style={{ background: 'rgba(177,156,217,0.18)', backdropFilter: 'blur(12px)' }}
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           className="absolute top-20 left-10 w-20 h-20 bg-primary-purple/10 rounded-full"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
-          transition={{ 
-            duration: 1, 
+          transition={{
+            duration: 1,
             delay: 0.5,
             y: {
               duration: 2,
               repeat: Infinity,
-              ease: "easeInOut"
-            }
+              ease: 'easeInOut',
+            },
           }}
         />
         <motion.div
           className="absolute top-40 right-20 w-16 h-16 bg-secondary-purple/10 rounded-full"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
-          transition={{ 
-            duration: 1, 
+          transition={{
+            duration: 1,
             delay: 0.7,
             y: {
               duration: 2.5,
               repeat: Infinity,
-              ease: "easeInOut"
-            }
+              ease: 'easeInOut',
+            },
           }}
         />
         <motion.div
           className="absolute bottom-20 left-1/4 w-12 h-12 bg-accent-purple/10 rounded-full"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
-          transition={{ 
-            duration: 1, 
+          transition={{
+            duration: 1,
             delay: 0.9,
             y: {
               duration: 3,
               repeat: Infinity,
-              ease: "easeInOut"
-            }
+              ease: 'easeInOut',
+            },
           }}
         />
       </div>
@@ -90,9 +93,30 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Specializing in ADHD assessment, emotional support, and therapeutic interventions. 
+              Specializing in ADHD assessment, emotional support, and therapeutic interventions.
               Dedicated to providing compassionate mental health care and clinical research.
             </motion.p>
+
+            {/* Safiyah Image */}
+            <motion.div
+              className="flex justify-content-center mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.45 }}
+            >
+              <img
+                src="/saf.jpeg"
+                alt="Safiyah Sohail"
+                style={{
+                  width: 160,
+                  height: 160,
+                  objectFit: 'cover',
+                  borderRadius: '50%',
+                  boxShadow: '0 4px 24px 0 rgba(177,156,217,0.18)',
+                  border: '4px solid #fff',
+                }}
+              />
+            </motion.div>
 
             <motion.div
               className="flex flex-column sm:flex-row gap-4 justify-content-center mt-4"
@@ -182,4 +206,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

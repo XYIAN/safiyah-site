@@ -1,9 +1,9 @@
+'use client';
+
 import React, { useRef, useEffect } from 'react';
 
 // Simple particles implementation (customizable for Magic UI style)
-const PURPLE_COLORS = [
-  '#b19cd9', '#a25afd', '#c4a8e0', '#ffb3d9', '#d1b3ff', '#e0bbff'
-];
+const PURPLE_COLORS = ['#b19cd9', '#a25afd', '#c4a8e0', '#ffb3d9', '#d1b3ff', '#e0bbff'];
 
 function randomBetween(a: number, b: number) {
   return a + Math.random() * (b - a);
@@ -101,4 +101,4 @@ export default function ParticlesOverlay({ count = 40 }: { count?: number }) {
       aria-hidden="true"
     />
   );
-} 
+}
