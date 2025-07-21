@@ -62,16 +62,16 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen py-20">
-          {/* Left Content */}
+        <div className="flex flex-column align-items-center justify-content-center min-h-screen py-6 gap-6">
+          {/* Left Content (now top) */}
           <motion.div
-            className="flex-1 text-center lg:text-left mb-12 lg:mb-0"
+            className="w-full text-center mb-4"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <motion.div
-              className="inline-flex items-center space-x-2 bg-primary-purple/10 text-primary-purple px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex align-items-center gap-2 bg-primary-purple/10 text-primary-purple px-4 py-2 border-round text-sm font-medium mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
             </motion.div>
 
             <motion.h1
-              className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"
+              className="text-5xl md:text-7xl font-bold mb-4 line-height-1"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
             </motion.h1>
 
             <motion.p
-              className="text-xl lg:text-2xl text-gray-600 mb-8 max-w-2xl"
+              className="text-xl md:text-2xl text-gray-600 mb-6 max-w-30rem mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start mt-8"
+              className="flex flex-column sm:flex-row gap-4 justify-content-center mt-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
 
             {/* Stats */}
             <motion.div
-              className="flex justify-center lg:justify-start space-x-8 mt-12"
+              className="flex justify-content-center gap-6 mt-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -137,9 +137,9 @@ const Hero: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Visual Elements */}
+          {/* Visual Elements (now below text) */}
           <motion.div
-            className="flex-1 flex justify-center lg:justify-end"
+            className="w-full flex justify-content-center mt-4"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -147,12 +147,12 @@ const Hero: React.FC = () => {
             <div className="relative">
               {/* Main Card */}
               <motion.div
-                className="w-80 h-96 bg-gradient-to-br from-primary-purple to-secondary-purple rounded-3xl shadow-2xl relative overflow-hidden mb-8"
+                className="w-20rem h-24rem bg-gradient-to-br from-primary-purple to-secondary-purple border-round-3xl shadow-2xl relative overflow-hidden mb-4"
                 whileHover={{ scale: 1.05, rotateY: 5 }}
                 transition={{ duration: 0.3 }}
               >
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex align-items-center justify-content-center">
                   <div className="text-center text-white">
                     <Brain size={80} className="mx-auto mb-4" />
                     <h3 className="text-2xl font-bold mb-2">Clinical Psychology</h3>
@@ -163,7 +163,7 @@ const Hero: React.FC = () => {
 
               {/* Floating Cards */}
               <motion.div
-                className="absolute -top-8 -left-8 w-32 h-32 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-8"
+                className="absolute -top-3 -left-3 w-8rem h-8rem bg-white border-round-2xl shadow-lg flex align-items-center justify-content-center mb-4"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -173,7 +173,7 @@ const Hero: React.FC = () => {
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-8 -right-8 w-28 h-28 bg-white rounded-2xl shadow-lg flex items-center justify-center"
+                className="absolute -bottom-3 -right-3 w-7rem h-7rem bg-white border-round-2xl shadow-lg flex align-items-center justify-content-center"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1 }}
@@ -194,7 +194,7 @@ const Hero: React.FC = () => {
         >
           <motion.button
             onClick={scrollToContent}
-            className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors"
+            className="p-2 border-round bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             animate={{ y: [0, 10, 0] }}
