@@ -1,9 +1,38 @@
+import type { Metadata } from 'next';
 import PageHero from '@/components/common/PageHero'
 import ContactFormSection from '@/components/contact/ContactFormSection'
 import ServicesOverview from '@/components/contact/ServicesOverview'
 import FAQSection from '@/components/contact/FAQSection'
 import LocationHours from '@/components/contact/LocationHours'
 import PageCallToAction from '@/components/common/PageCallToAction'
+
+export const metadata: Metadata = {
+  title: 'Contact Safiyah Sohail | ADHD & Mental Health Support',
+  description: 'Contact Safiyah Sohail for ADHD assessment, therapeutic support, and mental health consultations. Start your journey to better mental health today.',
+  openGraph: {
+    title: 'Contact Safiyah Sohail | ADHD & Mental Health Support',
+    description: 'Contact Safiyah Sohail for ADHD assessment, therapeutic support, and mental health consultations. Start your journey to better mental health today.',
+    url: 'https://safiyah-sohail.com/contact',
+    siteName: 'Safiyah Sohail Portfolio',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Safiyah Sohail - Mental Health Professional',
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Safiyah Sohail | ADHD & Mental Health Support',
+    description: 'Contact Safiyah Sohail for ADHD assessment, therapeutic support, and mental health consultations. Start your journey to better mental health today.',
+    images: ['/og-image.jpg'],
+    creator: '@safiyah_sohail',
+  },
+};
 
 export default function ContactPage() {
   return (

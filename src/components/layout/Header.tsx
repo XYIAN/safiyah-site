@@ -40,9 +40,9 @@ const Header: React.FC = () => {
         zIndex: 1000,
       }}
     >
-      <div className="flex items-center justify-between h-20 w-full px-6">
+      <div className="flex align-items-center justify-content-between h-20 w-full px-6">
         {/* Left: Logo and Name */}
-        <div className="flex items-center space-x-3">
+        <div className="flex align-items-center gap-3">
           <div style={{ width: 40, height: 40, position: 'relative' }}>
             <Image
               src="/icons/main-icon.png"
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
 
         {/* Right: Hamburger Icon */}
         <button
-          className="flex items-center justify-center rounded-lg"
+          className="flex align-items-center justify-content-center border-round"
           style={{ background: 'none', border: 'none', outline: 'none', cursor: 'pointer', padding: '1rem' }}
           aria-label="Open menu"
           onClick={() => setSidebarOpen(true)}

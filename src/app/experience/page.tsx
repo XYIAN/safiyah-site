@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Section from '@/components/common/Section'
 import ExperienceTimeline from '@/components/experience/ExperienceTimeline'
 import KeyAchievements from '@/components/experience/KeyAchievements'
@@ -5,6 +6,34 @@ import Specializations from '@/components/experience/Specializations'
 import ProfessionalDevelopment from '@/components/experience/ProfessionalDevelopment'
 import PageHero from '@/components/common/PageHero'
 import PageCallToAction from '@/components/common/PageCallToAction'
+
+export const metadata: Metadata = {
+  title: 'Professional Experience | Safiyah Sohail',
+  description: 'Explore the professional experience of Safiyah Sohail, including clinical psychology, ADHD assessment, and therapeutic interventions.',
+  openGraph: {
+    title: 'Professional Experience | Safiyah Sohail',
+    description: 'Explore the professional experience of Safiyah Sohail, including clinical psychology, ADHD assessment, and therapeutic interventions.',
+    url: 'https://safiyah-sohail.com/experience',
+    siteName: 'Safiyah Sohail Portfolio',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Safiyah Sohail - Mental Health Professional',
+      },
+    ],
+    locale: 'en_GB',
+    type: 'profile',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Professional Experience | Safiyah Sohail',
+    description: 'Explore the professional experience of Safiyah Sohail, including clinical psychology, ADHD assessment, and therapeutic interventions.',
+    images: ['/og-image.jpg'],
+    creator: '@safiyah_sohail',
+  },
+};
 
 export default function ExperiencePage() {
   return (

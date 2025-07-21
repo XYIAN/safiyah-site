@@ -4,6 +4,7 @@ import '@/styles/globals.scss'
 import 'primereact/resources/themes/lara-light-pink/theme.css'
 import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
+import 'primeflex/primeflex.css';
 import { PrimeReactProvider } from 'primereact/api'
 import { Card } from 'primereact/card'
 import Header from '@/components/layout/Header'
