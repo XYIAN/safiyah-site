@@ -10,7 +10,6 @@ export { default as Container } from './common/Container';
 
 // Page-specific components
 export { default as Hero } from './home/Hero';
-export { default as AboutSection } from './about/AboutSection';
 export { default as ExperienceTimeline } from './experience/ExperienceTimeline';
 export { default as EducationGrid } from './education/EducationGrid';
 export { default as ContactForm } from './contact/ContactForm'; 

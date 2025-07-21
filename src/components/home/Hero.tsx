@@ -1,30 +1,11 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-// @ts-expect-error - anime.js types are not properly exported
-import anime from 'animejs/lib/anime.es.js';
 import { ChevronDown, Heart, Brain, Users } from 'lucide-react';
 import Button from '@/components/common/Button';
 
 const Hero: React.FC = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (heroRef.current) {
-      // Animate floating elements
-      anime({
-        targets: '.floating-element',
-        translateY: [-10, 10],
-        duration: 2000,
-        direction: 'alternate',
-        loop: true,
-        easing: 'easeInOutSine',
-        delay: anime.stagger(200)
-      });
-    }
-  }, []);
-
   const scrollToContent = () => {
     const element = document.getElementById('about');
     if (element) {
@@ -33,26 +14,50 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section ref={heroRef} className="section section--hero relative overflow-hidden">
+    <section className="section section--hero relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-primary-purple/10 rounded-full floating-element"
+          className="absolute top-20 left-10 w-20 h-20 bg-primary-purple/10 rounded-full"
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
+          transition={{ 
+            duration: 1, 
+            delay: 0.5,
+            y: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
         />
         <motion.div
-          className="absolute top-40 right-20 w-16 h-16 bg-secondary-purple/10 rounded-full floating-element"
+          className="absolute top-40 right-20 w-16 h-16 bg-secondary-purple/10 rounded-full"
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
+          transition={{ 
+            duration: 1, 
+            delay: 0.7,
+            y: {
+              duration: 2.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
         />
         <motion.div
-          className="absolute bottom-20 left-1/4 w-12 h-12 bg-accent-purple/10 rounded-full floating-element"
+          className="absolute bottom-20 left-1/4 w-12 h-12 bg-accent-purple/10 rounded-full"
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
+          transition={{ 
+            duration: 1, 
+            delay: 0.9,
+            y: {
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
         />
       </div>
 
