@@ -8,7 +8,7 @@ A modern, responsive portfolio website for Safiyah Sohail, a mental health profe
 - **Responsive Layout**: Optimized for all devices and screen sizes
 - **Component-Based Architecture**: Modular, reusable components
 - **TypeScript**: Full type safety and better development experience
-- **SEO Optimized**: Built with Next.js 15+ and proper meta tags
+- **SEO Optimized**: Built with Next.js 15.4.2 and proper meta tags
 - **Performance**: Fast loading with static generation and optimization
 - **Parallax Background**: Beautiful animated background with custom image
 - **Custom Icon**: Professional branding with custom favicon
@@ -92,13 +92,14 @@ Each page has its own folder with components specific to that page's content and
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15+ with App Router
-- **Language**: TypeScript
-- **Styling**: SCSS with Tailwind CSS utility classes
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **SEO**: next-seo
+- **Framework**: Next.js 15.4.2 with App Router
+- **Language**: TypeScript 5
+- **Styling**: SCSS with Tailwind CSS 4 utility classes
+- **Animations**: Framer Motion 12.23.6
+- **Icons**: Lucide React 0.525.0
+- **SEO**: next-seo 6.8.0
 - **Build Tool**: Turbopack (development)
+- **React**: 19.1.0
 
 ## 📦 Installation
 
@@ -178,10 +179,10 @@ npm run build
 - **Contact**: Uses PageHero, ContactFormSection, ServicesOverview, FAQSection, LocationHours, PageCallToAction
 
 ### [Earlier] - Initial Portfolio Setup
-- Initial portfolio setup with Next.js 15+
+- Initial portfolio setup with Next.js 15.4.2
 - Responsive design implementation
 - SEO optimization
-- Animation integration with Framer Motion
+- Animation integration with Framer Motion 12.23.6
 - Contact form functionality
 - Professional content for mental health practice
 
