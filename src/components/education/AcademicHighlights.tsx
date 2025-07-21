@@ -3,55 +3,56 @@
 import React from 'react';
 import { GraduationCap, Award, BookOpen, Target } from 'lucide-react';
 import Section from '@/components/common/Section';
-import Card from '@/components/common/Card';
+import SectionHeader from '@/components/common/SectionHeader';
+import GridLayout from '@/components/common/GridLayout';
+import StatsCard from '@/components/common/StatsCard';
 
 const AcademicHighlights: React.FC = () => {
+  const highlights = [
+    {
+      icon: GraduationCap,
+      number: '3',
+      title: 'Degrees Earned',
+      description: 'From Bachelor\'s to Doctorate in Clinical Psychology'
+    },
+    {
+      icon: Award,
+      number: '4',
+      title: 'Professional Certifications',
+      description: 'Specialized training in ADHD, CBT, and family therapy'
+    },
+    {
+      icon: BookOpen,
+      number: '15+',
+      title: 'Research Papers',
+      description: 'Published academic research and clinical studies'
+    },
+    {
+      icon: Target,
+      number: '8+',
+      title: 'Years of Study',
+      description: 'Dedicated academic pursuit in psychology and mental health'
+    }
+  ];
+
   return (
     <Section background="primary">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Academic Highlights</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Key achievements and milestones throughout my educational journey
-        </p>
-      </div>
+      <SectionHeader
+        title="Academic Highlights"
+        subtitle="Key achievements and milestones throughout my educational journey"
+      />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="text-center">
-          <GraduationCap className="w-12 h-12 text-primary-purple mx-auto mb-4" />
-          <div className="text-3xl font-bold text-primary-purple mb-2">3</div>
-          <h3 className="text-lg font-semibold mb-2">Degrees Earned</h3>
-          <p className="text-gray-600 text-sm">
-            From Bachelor&apos;s to Doctorate in Clinical Psychology
-          </p>
-        </Card>
-
-        <Card className="text-center">
-          <Award className="w-12 h-12 text-primary-purple mx-auto mb-4" />
-          <div className="text-3xl font-bold text-primary-purple mb-2">4</div>
-          <h3 className="text-lg font-semibold mb-2">Professional Certifications</h3>
-          <p className="text-gray-600 text-sm">
-            Specialized training in ADHD, CBT, and family therapy
-          </p>
-        </Card>
-
-        <Card className="text-center">
-          <BookOpen className="w-12 h-12 text-primary-purple mx-auto mb-4" />
-          <div className="text-3xl font-bold text-primary-purple mb-2">15+</div>
-          <h3 className="text-lg font-semibold mb-2">Research Papers</h3>
-          <p className="text-gray-600 text-sm">
-            Published academic research and clinical studies
-          </p>
-        </Card>
-
-        <Card className="text-center">
-          <Target className="w-12 h-12 text-primary-purple mx-auto mb-4" />
-          <div className="text-3xl font-bold text-primary-purple mb-2">8+</div>
-          <h3 className="text-lg font-semibold mb-2">Years of Study</h3>
-          <p className="text-gray-600 text-sm">
-            Dedicated academic pursuit in psychology and mental health
-          </p>
-        </Card>
-      </div>
+      <GridLayout cols={{ sm: 1, md: 2, lg: 4 }}>
+        {highlights.map((highlight, index) => (
+          <StatsCard
+            key={index}
+            icon={highlight.icon}
+            number={highlight.number}
+            title={highlight.title}
+            description={highlight.description}
+          />
+        ))}
+      </GridLayout>
     </Section>
   );
 };

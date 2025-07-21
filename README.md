@@ -1,274 +1,310 @@
 # Safiyah Sohail - Mental Health Professional Portfolio
 
-A modern, responsive portfolio website for **Safiyah Sohail**, a mental health and psychology professional specializing in ADHD assessment, emotional support, therapeutic interventions, and clinical research.
+A modern, responsive portfolio website for Safiyah Sohail, a mental health and psychology professional specializing in ADHD assessment, emotional support, therapeutic interventions, and clinical research.
 
-## 🌟 Features
+## Features
 
-- **Modern Design**: Purple-based calming theme with elegant, glossy UI elements
-- **Responsive Layout**: Mobile-first design that works perfectly on all devices
-- **Smooth Animations**: Powered by Framer Motion and Anime.js for engaging user experience
-- **SEO Optimized**: Comprehensive meta tags, OpenGraph, and Twitter metadata
-- **Professional Content**: Showcases qualifications, experience, and services
-- **Contact Form**: Interactive form with validation and smooth user feedback
-- **Accessibility**: WCAG compliant with proper focus states and semantic HTML
+### 🎨 Design System
+- **Purple-based calming theme** with elegant, glossy UI elements
+- **Smooth animations** using Framer Motion
+- **Mobile-first responsive design** with Tailwind CSS
+- **Consistent component architecture** with reusable UI components
+- **Accessibility compliant** (WCAG guidelines)
 
-## 🎨 Design System
+### 📱 Pages & Content
+- **Home**: Hero section, about preview, professional highlights, call-to-action
+- **About**: Professional summary, values & mission, therapeutic approach
+- **Experience**: Work timeline, key achievements, specializations, professional development
+- **Education**: Academic qualifications, certifications, research focus, ongoing development
+- **Contact**: Contact form, services overview, FAQ, location & hours
 
-- **Color Palette**: Purple-based theme (#6b46c1, #8b5cf6, #a855f7)
-- **Typography**: Inter font family with clear hierarchy
-- **Components**: Reusable cards, buttons, and sections with consistent styling
-- **Animations**: Smooth transitions and hover effects throughout
+### 🛠 Technical Features
+- **Next.js 15+** with App Router and TypeScript
+- **SCSS** with custom variables and modern syntax
+- **SEO optimized** with next-seo, OpenGraph, and Twitter metadata
+- **Component-based architecture** with reusable components
+- **Form validation** and user feedback
+- **Performance optimized** with proper loading and caching
 
-## 🛠️ Tech Stack
+### 🔧 Reusable Components
+- **IconCard**: Cards with icons, titles, and descriptions
+- **StatsCard**: Cards with numbers, titles, and descriptions
+- **ContentCard**: Cards with titles, descriptions, and optional bullet lists
+- **SectionHeader**: Consistent section headers with titles and subtitles
+- **GridLayout**: Responsive grid layouts with customizable columns
+- **Button**: Reusable buttons with variants and animations
+- **Card**: Base card component with variants
+- **Section**: Section wrapper with background variants
+- **Container**: Layout container with max-width control
+
+## Tech Stack
 
 - **Framework**: Next.js 15+ with App Router
 - **Language**: TypeScript
-- **Styling**: SCSS with custom variables and mixins
-- **Animations**: Framer Motion + Anime.js
+- **Styling**: SCSS with Tailwind CSS
+- **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **SEO**: Next.js built-in SEO with custom metadata
-- **Deployment**: Ready for Vercel, Netlify, or any static hosting
+- **SEO**: next-seo, next/head
+- **Deployment**: Vercel/Netlify ready
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
 ├── app/                    # Next.js App Router pages
-│   ├── about/             # About page
-│   ├── experience/        # Experience page
-│   ├── education/         # Education page
-│   ├── contact/           # Contact page
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Homepage
+│   ├── layout.tsx         # Root layout with SEO metadata
+│   ├── page.tsx           # Home page
+│   ├── about/page.tsx     # About page
+│   ├── experience/page.tsx # Experience page
+│   ├── education/page.tsx # Education page
+│   └── contact/page.tsx   # Contact page
 ├── components/            # React components
-│   ├── common/            # Reusable components
-│   ├── layout/            # Header, Footer
-│   ├── home/              # Homepage components
-│   ├── about/             # About page components
-│   ├── experience/        # Experience components
-│   ├── education/         # Education components
-│   └── contact/           # Contact components
-├── styles/                # SCSS stylesheets
-│   ├── globals.scss       # Global styles
-│   └── _variables.scss    # Design system variables
-└── types/                 # TypeScript type definitions
+│   ├── common/           # Reusable UI components
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── Section.tsx
+│   │   ├── Container.tsx
+│   │   ├── IconCard.tsx
+│   │   ├── StatsCard.tsx
+│   │   ├── ContentCard.tsx
+│   │   ├── SectionHeader.tsx
+│   │   └── GridLayout.tsx
+│   ├── layout/           # Layout components
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   ├── home/             # Home page components
+│   │   ├── Hero.tsx
+│   │   ├── AboutPreview.tsx
+│   │   ├── StatsSection.tsx
+│   │   └── CallToAction.tsx
+│   ├── about/            # About page components
+│   │   └── AboutSection.tsx
+│   ├── experience/       # Experience page components
+│   │   ├── ExperienceTimeline.tsx
+│   │   ├── KeyAchievements.tsx
+│   │   ├── Specializations.tsx
+│   │   └── ProfessionalDevelopment.tsx
+│   ├── education/        # Education page components
+│   │   ├── EducationGrid.tsx
+│   │   ├── AcademicHighlights.tsx
+│   │   ├── ResearchFocus.tsx
+│   │   └── OngoingDevelopment.tsx
+│   ├── contact/          # Contact page components
+│   │   ├── ContactForm.tsx
+│   │   └── ServicesOverview.tsx
+│   └── index.ts          # Barrel exports
+├── styles/               # SCSS styles
+│   ├── _variables.scss   # Design system variables
+│   └── globals.scss      # Global styles
+└── types/                # TypeScript type definitions
+    └── index.ts
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-
 - Node.js 18+ 
 - npm or yarn
 
 ### Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+cd safiyah-site
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/safiyah-site.git
-   cd safiyah-site
-   ```
+# Install dependencies
+npm install
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+# Run development server
+npm run dev
+```
 
 ### Build for Production
-
 ```bash
+# Build the application
 npm run build
+
+# Start production server
 npm start
 ```
 
-## 📄 Pages
+## Page Descriptions
 
-### Home (`/`)
-- Hero section with animated elements
-- Professional highlights and statistics
-- Service overview with call-to-action
+### Home Page (`/`)
+- **Hero Section**: Animated introduction with call-to-action
+- **About Preview**: Overview of services and expertise
+- **Professional Highlights**: Key statistics and achievements
+- **Call to Action**: Contact and navigation prompts
 
-### About (`/about`)
-- Professional summary and background
-- Values and mission statement
-- Therapeutic approach and methodologies
+### About Page (`/about`)
+- **Professional Summary**: Background and approach
+- **Values & Mission**: Core principles and commitment
+- **Therapeutic Approach**: Evidence-based methodologies
+- **Call to Action**: Consultation and qualification links
 
-### Experience (`/experience`)
-- Interactive timeline of work experience
-- Key achievements and specializations
-- Professional development highlights
+### Experience Page (`/experience`)
+- **Work Timeline**: Chronological work experience with details
+- **Key Achievements**: Quantified accomplishments and impact
+- **Areas of Specialization**: Detailed expertise breakdown
+- **Professional Development**: Ongoing learning and certifications
 
-### Education (`/education`)
-- Academic qualifications and degrees
-- Professional certifications
-- Research focus and publications
+### Education Page (`/education`)
+- **Academic Qualifications**: Degrees and institutions
+- **Professional Certifications**: Specialized training and credentials
+- **Research Focus**: Areas of research interest and contributions
+- **Ongoing Development**: Continuous learning and professional growth
 
-### Contact (`/contact`)
-- Interactive contact form with validation
-- Contact information and office hours
-- FAQ section and service overview
+### Contact Page (`/contact`)
+- **Contact Form**: Validated form with submission feedback
+- **Services Overview**: Available services and offerings
+- **FAQ Section**: Common questions and answers
+- **Location & Hours**: Practice information and availability
 
-## 🎯 SEO Features
+## SEO Features
 
-- **Meta Tags**: Comprehensive title, description, and keyword optimization
-- **OpenGraph**: Rich social media sharing cards
-- **Twitter Cards**: Optimized for Twitter sharing
-- **Structured Data**: Ready for schema markup implementation
-- **Sitemap**: Auto-generated sitemap for search engines
-- **Robots.txt**: Proper crawling instructions
+- **Meta tags** for all pages
+- **OpenGraph** and **Twitter Card** metadata
+- **Structured data** for better search engine understanding
+- **Sitemap** generation
+- **Robots.txt** configuration
+- **Performance optimization** for Core Web Vitals
 
-## 🔧 Customization
+## Customization
 
-### Colors
-Edit `src/styles/_variables.scss` to customize the color palette:
+### Colors & Theme
+The design system uses SCSS variables defined in `src/styles/_variables.scss`:
+- Primary purple colors
+- Typography scale
+- Spacing system
+- Shadow definitions
+- Animation durations
 
-```scss
-$primary-purple: #6b46c1;
-$primary-purple-light: #8b5cf6;
-$secondary-purple: #a855f7;
-```
+### Content Updates
+- Update content in respective page components
+- Modify data arrays in component files
+- Update SEO metadata in page files
+- Customize form handling in ContactForm component
 
-### Content
-Update content in respective page components:
-- Personal information in `src/app/layout.tsx`
-- Professional details in page components
-- Contact information in `src/components/contact/ContactForm.tsx`
+### Styling Changes
+- Modify SCSS variables for theme changes
+- Update component styles in respective files
+- Adjust responsive breakpoints in Tailwind config
+- Customize animations in Framer Motion components
 
-### Styling
-Modify `src/styles/globals.scss` for global style changes and component-specific styles in their respective files.
+## Responsive Design
 
-## 📱 Responsive Design
+The website is built with a mobile-first approach:
+- **Mobile**: Single column layouts, optimized touch targets
+- **Tablet**: Two-column grids, enhanced spacing
+- **Desktop**: Multi-column layouts, hover effects
+- **Large screens**: Maximum width containers, optimal readability
 
-The website is built with a mobile-first approach and includes:
-- Responsive navigation with mobile menu
-- Flexible grid layouts
-- Optimized typography scaling
-- Touch-friendly interactive elements
+## Accessibility
 
-## ♿ Accessibility
+- **WCAG 2.1 AA** compliance
+- **Semantic HTML** structure
+- **Keyboard navigation** support
+- **Screen reader** compatibility
+- **Color contrast** ratios
+- **Focus indicators** and states
 
-- Semantic HTML structure
-- Proper ARIA labels and roles
-- Keyboard navigation support
-- Focus management
-- Color contrast compliance
-- Screen reader friendly
-
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
-1. Connect your GitHub repository to Vercel
-2. Deploy automatically on push to main branch
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
 
 ### Netlify
-1. Build command: `npm run build`
-2. Publish directory: `out`
-3. Deploy from Git or drag-and-drop
+```bash
+# Build the project
+npm run build
+
+# Deploy to Netlify
+# Upload the 'out' directory or connect your repository
+```
 
 ### Other Platforms
-The site can be deployed to any static hosting platform that supports Next.js.
+The project is compatible with any static hosting platform that supports Next.js.
 
-## 📈 Performance
+## Performance
 
-- Optimized images and assets
-- Code splitting and lazy loading
-- Efficient animations
-- Minimal bundle size
-- Fast loading times
+- **Image optimization** with Next.js Image component
+- **Code splitting** and lazy loading
+- **CSS optimization** with Tailwind CSS
+- **Bundle analysis** and optimization
+- **Core Web Vitals** optimization
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
-## 📞 Support
+## Support
 
-For questions or support, please contact:
-- Email: safiyah.sohail@example.com
-- Phone: +44 123 456 789
+For questions or support, please contact the development team.
 
----
+## Changelog
 
-**Built with ❤️ for mental health professionals**
+### v1.2.0 - Component Consolidation & Refactoring
+- **Added reusable components**:
+  - `IconCard`: For cards with icons, titles, and descriptions
+  - `StatsCard`: For cards with numbers, titles, and descriptions
+  - `ContentCard`: For cards with titles, descriptions, and bullet lists
+  - `SectionHeader`: For consistent section headers
+  - `GridLayout`: For responsive grid layouts
+- **Refactored existing components** to use new reusable components:
+  - `AboutPreview`: Now uses IconCard, SectionHeader, and GridLayout
+  - `StatsSection`: Now uses StatsCard, SectionHeader, and GridLayout
+  - `ServicesOverview`: Now uses IconCard, SectionHeader, and GridLayout
+  - `KeyAchievements`: Now uses StatsCard, SectionHeader, and GridLayout
+  - `Specializations`: Now uses ContentCard, SectionHeader, and GridLayout
+  - `ProfessionalDevelopment`: Now uses StatsCard, SectionHeader, and GridLayout
+  - `AcademicHighlights`: Now uses StatsCard, SectionHeader, and GridLayout
+  - `ResearchFocus`: Now uses ContentCard, SectionHeader, and GridLayout
+  - `OngoingDevelopment`: Now uses StatsCard, SectionHeader, and GridLayout
+- **Improved code maintainability** by reducing duplication
+- **Enhanced component reusability** across different pages
+- **Updated component exports** in index.ts
+- **Maintained consistent styling** and functionality
 
----
+### v1.1.0 - Component Extraction & Organization
+- **Extracted inline JSX blocks** into dedicated functional components
+- **Created page-specific component folders**:
+  - `src/components/about/AboutSection.tsx`
+  - `src/components/home/AboutPreview.tsx`
+  - `src/components/home/StatsSection.tsx`
+  - `src/components/home/CallToAction.tsx`
+  - `src/components/experience/KeyAchievements.tsx`
+  - `src/components/experience/Specializations.tsx`
+  - `src/components/experience/ProfessionalDevelopment.tsx`
+  - `src/components/education/AcademicHighlights.tsx`
+  - `src/components/education/ResearchFocus.tsx`
+  - `src/components/education/OngoingDevelopment.tsx`
+  - `src/components/contact/ServicesOverview.tsx`
+- **Improved code organization** and maintainability
+- **Enhanced component reusability** and separation of concerns
+- **Updated barrel exports** for better import management
 
-## 📋 Changelog
-
-### Version 1.0.0 (2024-12-19)
-#### ✨ Initial Release
-- **Added**: Complete portfolio website for Safiyah Sohail
-- **Added**: Modern purple-based design system
-- **Added**: Responsive layout with mobile-first approach
-- **Added**: 5 main pages: Home, About, Experience, Education, Contact
-- **Added**: Interactive components with Framer Motion animations
-- **Added**: SEO optimization with comprehensive meta tags
-- **Added**: Contact form with validation and user feedback
-- **Added**: Professional content showcasing mental health expertise
-- **Added**: Accessibility features and WCAG compliance
-- **Added**: TypeScript for type safety
-- **Added**: SCSS for advanced styling capabilities
-- **Added**: Component-based architecture for maintainability
-
-#### 🎨 Design Features
-- Purple theme with calming color palette
-- Glossy UI elements and smooth transitions
-- Professional typography with Inter font
-- Consistent spacing and layout system
-- Hover effects and micro-interactions
-
-#### 📱 Technical Features
-- Next.js 15+ with App Router
-- Framer Motion for animations
-- Anime.js for additional animation effects
-- Lucide React for icons
-- Responsive design with Tailwind CSS utilities
-- TypeScript for type safety
-- SCSS for advanced styling
-
-#### 🔧 Components
-- Header with responsive navigation
-- Footer with social links and contact info
-- Hero section with animated elements
-- Timeline component for experience
-- Education grid with certifications
-- Contact form with validation
-- Reusable card and button components
-
-#### 📄 Pages
-- **Home**: Hero, about preview, stats, call-to-action
-- **About**: Professional summary, values, therapeutic approach
-- **Experience**: Timeline, achievements, specializations
-- **Education**: Qualifications, certifications, research focus
-- **Contact**: Form, FAQ, location, hours
-
-#### 🚀 Performance & SEO
-- Optimized for search engines
-- Fast loading times
-- Mobile-friendly design
-- Social media sharing optimization
-- Structured data ready
-- Accessibility compliant
-
-#### 🛠️ Development
-- Clean code architecture
-- Component reusability
-- Type safety with TypeScript
-- Modular SCSS structure
-- Easy customization
-- Deployment ready
+### v1.0.0 - Initial Release
+- **Complete portfolio website** with 5 main pages
+- **Modern purple theme** with glossy UI elements
+- **Framer Motion animations** throughout the site
+- **Mobile-first responsive design**
+- **SEO optimization** with comprehensive metadata
+- **Contact form** with validation and feedback
+- **Professional content** for mental health practice
+- **TypeScript** implementation for type safety
+- **SCSS styling** with custom variables
+- **Component-based architecture** with reusable UI components

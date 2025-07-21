@@ -2,89 +2,75 @@
 
 import React from 'react';
 import Section from '@/components/common/Section';
-import Card from '@/components/common/Card';
+import SectionHeader from '@/components/common/SectionHeader';
+import GridLayout from '@/components/common/GridLayout';
+import ContentCard from '@/components/common/ContentCard';
 
 const Specializations: React.FC = () => {
+  const specializations = [
+    {
+      title: 'ADHD Assessment & Intervention',
+      description: 'Comprehensive evaluation and evidence-based interventions for individuals with ADHD, including children, adolescents, and adults. Specialized in both diagnostic assessment and ongoing therapeutic support.',
+      bulletPoints: [
+        'Comprehensive diagnostic assessments',
+        'Behavioral and cognitive interventions',
+        'Family support and education programs',
+        'School collaboration and IEP support',
+        'Medication management consultation'
+      ]
+    },
+    {
+      title: 'Child & Adolescent Psychology',
+      description: 'Specialized mental health support for children and adolescents, addressing developmental challenges, emotional regulation, and family dynamics. Age-appropriate therapeutic approaches.',
+      bulletPoints: [
+        'Developmental assessment and intervention',
+        'Play therapy and creative interventions',
+        'Family systems therapy',
+        'School-based mental health support',
+        'Trauma-informed care'
+      ]
+    },
+    {
+      title: 'Clinical Research',
+      description: 'Active involvement in mental health research, contributing to evidence-based practice and advancing understanding of effective interventions for various mental health conditions.',
+      bulletPoints: [
+        'ADHD intervention effectiveness studies',
+        'Mental health screening tool development',
+        'Clinical outcome research',
+        'Peer-reviewed publication',
+        'Conference presentations'
+      ]
+    },
+    {
+      title: 'Therapeutic Interventions',
+      description: 'Evidence-based therapeutic approaches including CBT, mindfulness-based interventions, and family therapy. Tailored treatment plans for individual needs and goals.',
+      bulletPoints: [
+        'Cognitive Behavioral Therapy (CBT)',
+        'Mindfulness-based stress reduction',
+        'Family systems therapy',
+        'Group therapy facilitation',
+        'Crisis intervention and support'
+      ]
+    }
+  ];
+
   return (
     <Section background="secondary">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Areas of Specialization</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          My expertise spans various aspects of mental health care, with particular focus on 
-          ADHD assessment and therapeutic interventions
-        </p>
-      </div>
+      <SectionHeader
+        title="Areas of Specialization"
+        subtitle="My expertise spans various aspects of mental health care, with particular focus on ADHD assessment and therapeutic interventions"
+      />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card>
-          <h3 className="text-xl font-semibold mb-4 text-primary-purple">
-            ADHD Assessment & Intervention
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Comprehensive evaluation and evidence-based interventions for individuals 
-            with ADHD, including children, adolescents, and adults. Specialized in both diagnostic assessment 
-            and ongoing therapeutic support.
-          </p>
-          <ul className="text-gray-600 space-y-2">
-            <li>• Comprehensive diagnostic assessments</li>
-            <li>• Behavioral and cognitive interventions</li>
-            <li>• Family support and education programs</li>
-            <li>• School collaboration and IEP support</li>
-            <li>• Medication management consultation</li>
-          </ul>
-        </Card>
-
-        <Card>
-          <h3 className="text-xl font-semibold mb-4 text-primary-purple">
-            Child & Adolescent Psychology
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Specialized mental health support for children and adolescents, addressing developmental 
-            challenges, emotional regulation, and family dynamics. Age-appropriate therapeutic approaches.
-          </p>
-          <ul className="text-gray-600 space-y-2">
-            <li>• Developmental assessment and intervention</li>
-            <li>• Play therapy and creative interventions</li>
-            <li>• Family systems therapy</li>
-            <li>• School-based mental health support</li>
-            <li>• Trauma-informed care</li>
-          </ul>
-        </Card>
-
-        <Card>
-          <h3 className="text-xl font-semibold mb-4 text-primary-purple">
-            Clinical Research
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Active involvement in mental health research, contributing to evidence-based practice 
-            and advancing understanding of effective interventions for various mental health conditions.
-          </p>
-          <ul className="text-gray-600 space-y-2">
-            <li>• ADHD intervention effectiveness studies</li>
-            <li>• Mental health screening tool development</li>
-            <li>• Clinical outcome research</li>
-            <li>• Peer-reviewed publication</li>
-            <li>• Conference presentations</li>
-          </ul>
-        </Card>
-
-        <Card>
-          <h3 className="text-xl font-semibold mb-4 text-primary-purple">
-            Therapeutic Interventions
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Evidence-based therapeutic approaches including CBT, mindfulness-based interventions, 
-            and family therapy. Tailored treatment plans for individual needs and goals.
-          </p>
-          <ul className="text-gray-600 space-y-2">
-            <li>• Cognitive Behavioral Therapy (CBT)</li>
-            <li>• Mindfulness-based stress reduction</li>
-            <li>• Family systems therapy</li>
-            <li>• Group therapy facilitation</li>
-            <li>• Crisis intervention and support</li>
-          </ul>
-        </Card>
-      </div>
+      <GridLayout cols={{ sm: 1, md: 2 }} gap="gap-8">
+        {specializations.map((specialization, index) => (
+          <ContentCard
+            key={index}
+            title={specialization.title}
+            description={specialization.description}
+            bulletPoints={specialization.bulletPoints}
+          />
+        ))}
+      </GridLayout>
     </Section>
   );
 };
