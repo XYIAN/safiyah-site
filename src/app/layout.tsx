@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Safiyah Sohail' }],
   creator: 'Safiyah Sohail',
   publisher: 'Safiyah Sohail',
+  icons: {
+    icon: '/icons/main-icon.png',
+    shortcut: '/icons/main-icon.png',
+    apple: '/icons/main-icon.png',
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -79,8 +84,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div className="parallax-background"></div>
         <Header />
-        <main className="pt-16">
+        <main className="pt-16 relative z-10">
           {children}
         </main>
         <Footer />
