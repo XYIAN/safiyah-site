@@ -91,8 +91,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <PrimeReactProvider>
-          <div className="parallax-background"></div>
           <Header />
+          <div className="parallax-background"></div>
           <main className="pt-16 relative z-10 flex justify-center min-h-screen">
             <Card
               className="main-content-card"
