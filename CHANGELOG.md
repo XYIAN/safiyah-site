@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.10] - 2024-12-19
+
+### 🖼️ Hero Image Fix
+
+- **Fixed hero image stretching** by using proper width and height instead of fill
+- **Maintained aspect ratio** with proper image dimensions
+- **Better responsive sizing** with Tailwind classes for different screen sizes
+
 ## [1.5.9] - 2024-12-19
 
 ### 🎨 Mobile Layout & Design Fixes

@@ -11,16 +11,14 @@ export default function Hero() {
         <div className="text-center w-full max-w-2xl mx-auto">
           {/* Profile Image */}
           <div className="mb-8">
-            <div
-              className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6"
-              style={{ height: '96px' }}
-            >
+            <div className="relative mx-auto mb-6">
               <Image
                 src="/saf.jpeg"
                 alt="Safiyah Sohail"
-                fill
+                width={128}
+                height={128}
                 sizes="(max-width: 640px) 96px, 128px"
-                className="rounded-full object-cover border-4 border-purple-200 shadow-lg"
+                className="rounded-full object-cover border-4 border-purple-200 shadow-lg w-24 h-24 sm:w-32 sm:h-32"
                 priority
               />
             </div>
