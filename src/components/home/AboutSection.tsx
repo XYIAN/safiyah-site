@@ -39,7 +39,7 @@ export default function AboutSection() {
           interventions.
         </p>
 
-        {/* Services Grid */}
+        {/* Services Grid - Always flex-col on mobile */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {services.map((service, index) => (
             <CustomCard key={index} variant="default" className="text-center">

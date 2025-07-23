@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.9] - 2024-12-19
+
+### 🎨 Mobile Layout & Design Fixes
+
+- **Fixed mobile layout issues** - buttons now properly stack in flex-column on mobile
+- **Prevented content cutoff** with proper padding and responsive design
+- **Restored parallax background** with animated floating elements
+- **Fixed hamburger menu visibility** and improved sidebar functionality
+
+### 📱 Mobile Experience
+
+- **Proper flex-column layout** for all button groups on mobile
+- **Responsive grid systems** that stack properly on small screens
+- **Consistent padding and spacing** to prevent content cutoff
+- **Touch-friendly navigation** with improved hamburger menu
+
+### 🖼️ Image Optimization
+
+- **Fixed Next.js image warnings** by adding proper `sizes` props
+- **Resolved image height issues** with explicit height styling
+- **Improved image performance** with proper optimization settings
+- **Better responsive images** for different screen sizes
+
+### 🎯 Visual Improvements
+
+- **Restored parallax background** with subtle animated elements
+- **Better backdrop blur effects** for section backgrounds
+- **Improved visual hierarchy** with proper spacing and typography
+- **Enhanced mobile responsiveness** across all components
+
+### 🔧 Technical Fixes
+
+- **Removed unused imports** to clean up linter warnings
+- **Fixed container layouts** to prevent content overflow
+- **Improved responsive breakpoints** for better mobile experience
+- **Enhanced component structure** for better maintainability
+
 ## [1.5.8] - 2024-12-19
 
 ### 🧩 PrimeReact Component Integration

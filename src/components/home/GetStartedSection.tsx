@@ -40,7 +40,7 @@ export default function GetStartedSection() {
           interventions, I&apos;m here to help you on your mental health journey.
         </p>
 
-        {/* Contact Options */}
+        {/* Contact Options - Always flex-col on mobile */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
           {contactOptions.map((option, index) => (
             <CustomCard

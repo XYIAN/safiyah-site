@@ -6,5 +6,7 @@ interface PageContainerProps {
 }
 
 export default function PageContainer({ children, className = '' }: PageContainerProps) {
-  return <div className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>;
+  return (
+    <div className={`w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>
+  );
 }

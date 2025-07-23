@@ -6,16 +6,20 @@ import PageContainer from '@/components/common/PageContainer';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center py-16">
+    <section className="min-h-screen flex items-center justify-center py-16 px-4">
       <PageContainer>
-        <div className="text-center">
+        <div className="text-center w-full max-w-2xl mx-auto">
           {/* Profile Image */}
           <div className="mb-8">
-            <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6">
+            <div
+              className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6"
+              style={{ height: '96px' }}
+            >
               <Image
                 src="/saf.jpeg"
                 alt="Safiyah Sohail"
                 fill
+                sizes="(max-width: 640px) 96px, 128px"
                 className="rounded-full object-cover border-4 border-purple-200 shadow-lg"
                 priority
               />
@@ -36,8 +40,8 @@ export default function Hero() {
             ADHD assessment, emotional support, and therapeutic interventions.
           </p>
 
-          {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* Call to Action - Always flex-col on mobile */}
+          <div className="flex flex-col gap-4 justify-center items-center">
             <CustomButton
               variant="primary"
               href="/about"
