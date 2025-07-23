@@ -1,48 +1,57 @@
 'use client';
 
 import React from 'react';
-import { ButtonProps } from '@/types';
+import Link from 'next/link';
 
-const Button: React.FC<ButtonProps> = ({
+interface ButtonProps {
+  children: React.ReactNode;
+  href?: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+  onClick?: () => void;
+  type?: 'button' | 'submit';
+  disabled?: boolean;
+}
+
+export default function Button({
   children,
+  href,
   variant = 'primary',
   size = 'md',
   className = '',
   onClick,
-  disabled = false,
   type = 'button',
-  href,
-  ...props
-}) => {
-  const baseClasses = 'btn';
+  disabled = false,
+}: ButtonProps) {
+  const baseClasses =
+    'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
+
   const variantClasses = {
-    primary: 'btn--primary',
-    secondary: 'btn--secondary',
-    ghost: 'btn--ghost',
+    primary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-md hover:shadow-lg',
+    secondary:
+      'bg-white text-purple-600 border-2 border-purple-200 shadow-md hover:shadow-lg hover:bg-purple-50',
   };
+
   const sizeClasses = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg',
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
-  const buttonContent = (
-    <button className={classes} onClick={onClick} disabled={disabled} type={type} {...props}>
-      {children}
-    </button>
-  );
-
   if (href) {
     return (
-      <a href={href} className={classes} {...props}>
+      <Link href={href} className={classes}>
         {children}
-      </a>
+      </Link>
     );
   }
 
-  return buttonContent;
-};
-
-export default Button;
+  return (
+    <button type={type} className={classes} onClick={onClick} disabled={disabled}>
+      {children}
+    </button>
+  );
+}

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --primary-purple: #8b5cf6;
+  --primary-pink: #ec4899;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+}
+
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--primary-purple);
+  outline-offset: 2px;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply bg-white text-purple-600 font-medium px-6 py-3 rounded-lg border-2 border-purple-200 shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 hover:bg-purple-50;
+}
