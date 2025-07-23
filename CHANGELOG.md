@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.5] - 2024-12-19
+
+### 🎨 Design & Layout
+
+- **Complete mobile-first redesign** with proper centering and spacing
+- **Simplified content structure** - removed detailed paragraphs from home page
+- **Better responsive grid systems** that work perfectly on mobile
+- **Improved spacing and padding** throughout all components
+- **Enhanced visual hierarchy** with proper typography and sizing
+- **Compact, focused content** with clear call-to-action buttons
+
+### 📱 Mobile Experience
+
+- **Fixed all centering issues** - content now properly centered on all devices
+- **Column-based layouts** with proper responsive breakpoints
+- **Better touch targets** and spacing for mobile interaction
+- **Optimized content width** for mobile readability
+- **Improved button sizing** and spacing for mobile devices
+
+### 🧹 Code Quality
+
+- **Streamlined component structure** with focused responsibilities
+- **Better responsive design** with proper mobile-first approach
+- **Optimized content distribution** across pages
+- **Cleaner, more maintainable code** structure
+
+### 🔗 Navigation
+
+- **Clear, focused call-to-action buttons** leading to specific pages
+- **Improved user flow** from home page to detailed content pages
+- **Better content hierarchy** with scannable information
+
 ## [1.5.4] - 2024-12-19
 
 ### 🎨 Design & Layout
