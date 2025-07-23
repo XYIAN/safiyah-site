@@ -29,7 +29,7 @@ export default function CustomButton({
     lg: 'px-8 py-4 text-lg',
   };
 
-  const classes = `${variantClasses[variant]} ${sizeClasses[buttonSize]} ${className}`;
+  const classes = `${variantClasses[variant]} ${sizeClasses[buttonSize]} ${className} whitespace-nowrap`;
 
   if (href) {
     return (

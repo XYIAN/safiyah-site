@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.12] - 2024-12-19
+
+### 🎨 Major UI Overhaul
+
+- **Added proper background image** using `/bg1.png` with parallax styling
+- **Completely redesigned header** with clean, simple layout and fixed aspect ratio logo
+- **Fixed button layout and styling** to prevent text wrapping and ensure proper centering
+- **Improved mobile-first design** with better responsive behavior
+
+### 🖼️ Background & Visual Improvements
+
+- **Real background image** with proper parallax effect using `backgroundAttachment: 'fixed'`
+- **White overlay** for better text readability while maintaining background visibility
+- **Proper z-index layering** to ensure content appears above background
+- **Removed placeholder background** elements in favor of actual image
+
+### 🍔 Header Redesign
+
+- **Simple, clean header** with proper logo aspect ratio using fixed dimensions
+- **Responsive name display** (hidden on mobile, visible on desktop)
+- **Better hamburger menu** with improved sidebar functionality
+- **Consistent spacing and styling** across all screen sizes
+
+### 🎯 Button Improvements
+
+- **Prevented text wrapping** with `whitespace-nowrap` class
+- **Better mobile layout** with proper stacking and centering
+- **Improved button sizing** with `max-w-xs` for better proportions
+- **Enhanced touch targets** for mobile usability
+
+### 📱 Mobile Experience
+
+- **Proper flex-column layout** for buttons on all screen sizes
+- **Better responsive design** with improved breakpoints
+- **Enhanced touch interactions** with proper button sizing
+- **Clean, uncluttered interface** optimized for mobile use
+
 ## [1.5.11] - 2024-12-19
 
 ### 🎯 Button Layout Fix

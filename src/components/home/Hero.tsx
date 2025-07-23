@@ -38,13 +38,13 @@ export default function Hero() {
             ADHD assessment, emotional support, and therapeutic interventions.
           </p>
 
-          {/* Call to Action - Stacked on mobile, side by side on larger screens */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
+          {/* Call to Action - Properly centered and stacked */}
+          <div className="flex flex-col gap-4 items-center justify-center">
             <CustomButton
               variant="primary"
               href="/about"
               buttonSize="lg"
-              className="w-full sm:w-auto"
+              className="w-full max-w-xs"
             >
               Learn More About Me
             </CustomButton>
@@ -52,7 +52,7 @@ export default function Hero() {
               variant="secondary"
               href="/contact"
               buttonSize="lg"
-              className="w-full sm:w-auto"
+              className="w-full max-w-xs"
             >
               Get in Touch
             </CustomButton>
