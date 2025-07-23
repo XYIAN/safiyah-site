@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { Clock, Users, FileText, Star } from 'lucide-react';
-import Button from '@/components/common/Button';
+import CustomButton from '@/components/common/CustomButton';
+import CustomCard from '@/components/common/CustomCard';
 import Section from '@/components/common/Section';
 
 export default function ProfessionalHighlights() {
@@ -46,9 +47,10 @@ export default function ProfessionalHighlights() {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {stats.map((stat, index) => (
-            <div
+            <CustomCard
               key={index}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6 border border-purple-100 text-center"
+              variant="default"
+              className="text-center bg-gradient-to-br from-purple-50 to-pink-50"
             >
               <div className="mb-4 flex justify-center">{stat.icon}</div>
               <div className="text-2xl sm:text-3xl font-bold text-purple-800 mb-2">
@@ -58,14 +60,14 @@ export default function ProfessionalHighlights() {
                 {stat.title}
               </div>
               <div className="text-xs sm:text-sm text-gray-600">{stat.description}</div>
-            </div>
+            </CustomCard>
           ))}
         </div>
 
         {/* Call to Action */}
-        <Button variant="secondary" href="/experience" className="px-8 py-3">
+        <CustomButton variant="secondary" href="/experience" buttonSize="lg">
           View My Experience
-        </Button>
+        </CustomButton>
       </div>
     </Section>
   );

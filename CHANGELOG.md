@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.8] - 2024-12-19
+
+### 🧩 PrimeReact Component Integration
+
+- **CustomButton component** that extends PrimeReact's Button with our styling
+- **CustomCard component** that extends PrimeReact's Card with our variants
+- **Proper TypeScript interfaces** that extend PrimeReact's component props
+- **Consistent styling** using PrimeReact's base components with our custom classes
+
+### 🎨 Component Architecture
+
+- **Replaced custom Button** with PrimeReact-based CustomButton
+- **Replaced custom Card** with PrimeReact-based CustomCard
+- **Proper prop handling** with TypeScript interfaces extending PrimeReact types
+- **Clean component structure** with reusable PrimeReact-based components
+
+### 🔧 Technical Improvements
+
+- **Type-safe component props** with proper interface extensions
+- **Consistent styling approach** using PrimeReact's styling system
+- **Better maintainability** with PrimeReact's component ecosystem
+- **Proper size prop handling** to avoid conflicts with PrimeReact's size prop
+
+### 📱 User Experience
+
+- **Consistent button behavior** across all components
+- **Better accessibility** with PrimeReact's built-in accessibility features
+- **Improved styling consistency** with PrimeReact's design system
+- **Enhanced component reusability** with proper prop interfaces
+
 ## [1.5.7] - 2024-12-19
 
 ### 🎨 Complete Styling Redesign

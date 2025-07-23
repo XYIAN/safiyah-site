@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '@/components/common/Button';
+import CustomButton from '@/components/common/CustomButton';
 import Image from 'next/image';
 import PageContainer from '@/components/common/PageContainer';
 
@@ -38,12 +38,22 @@ export default function Hero() {
 
           {/* Call to Action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="primary" href="/about" className="w-full sm:w-auto px-8 py-3">
+            <CustomButton
+              variant="primary"
+              href="/about"
+              buttonSize="lg"
+              className="w-full sm:w-auto"
+            >
               Learn More About Me
-            </Button>
-            <Button variant="secondary" href="/contact" className="w-full sm:w-auto px-8 py-3">
+            </CustomButton>
+            <CustomButton
+              variant="secondary"
+              href="/contact"
+              buttonSize="lg"
+              className="w-full sm:w-auto"
+            >
               Get in Touch
-            </Button>
+            </CustomButton>
           </div>
         </div>
       </PageContainer>

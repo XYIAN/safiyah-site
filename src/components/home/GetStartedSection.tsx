@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { Calendar, MessageCircle, Phone } from 'lucide-react';
-import Button from '@/components/common/Button';
+import CustomButton from '@/components/common/CustomButton';
+import CustomCard from '@/components/common/CustomCard';
 import Section from '@/components/common/Section';
 
 export default function GetStartedSection() {
@@ -42,17 +43,23 @@ export default function GetStartedSection() {
         {/* Contact Options */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
           {contactOptions.map((option, index) => (
-            <div
+            <CustomCard
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center"
+              variant="outlined"
+              className="text-center bg-white/10 backdrop-blur-sm border-white/20"
             >
               <div className="mb-4 flex justify-center">{option.icon}</div>
               <h3 className="text-lg font-semibold mb-2">{option.title}</h3>
               <p className="text-white/80 mb-4 text-sm">{option.description}</p>
-              <Button variant={option.variant} href="/contact" className="w-full text-sm px-4 py-2">
+              <CustomButton
+                variant={option.variant}
+                href="/contact"
+                buttonSize="sm"
+                className="w-full"
+              >
                 {option.buttonText}
-              </Button>
-            </div>
+              </CustomButton>
+            </CustomCard>
           ))}
         </div>
 
@@ -61,9 +68,9 @@ export default function GetStartedSection() {
           <p className="text-white/80 mb-6 text-sm">
             All consultations are confidential and conducted in a safe, supportive environment.
           </p>
-          <Button variant="primary" href="/about" className="px-8 py-3">
+          <CustomButton variant="primary" href="/about" buttonSize="lg">
             Learn More About My Approach
-          </Button>
+          </CustomButton>
         </div>
       </div>
     </Section>

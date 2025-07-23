@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { Brain, Heart, Users, Award } from 'lucide-react';
-import Button from '@/components/common/Button';
+import CustomButton from '@/components/common/CustomButton';
+import CustomCard from '@/components/common/CustomCard';
 import Section from '@/components/common/Section';
 
 export default function AboutSection() {
@@ -41,21 +42,18 @@ export default function AboutSection() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg p-6 shadow-sm border border-purple-100 text-center"
-            >
+            <CustomCard key={index} variant="default" className="text-center">
               <div className="mb-4 flex justify-center">{service.icon}</div>
               <h3 className="text-lg font-semibold text-purple-800 mb-2">{service.title}</h3>
               <p className="text-sm text-gray-600">{service.description}</p>
-            </div>
+            </CustomCard>
           ))}
         </div>
 
         {/* Call to Action */}
-        <Button variant="primary" href="/about" className="px-8 py-3">
+        <CustomButton variant="primary" href="/about" buttonSize="lg">
           Learn More About My Work
-        </Button>
+        </CustomButton>
       </div>
     </Section>
   );
