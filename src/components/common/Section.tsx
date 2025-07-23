@@ -10,7 +10,7 @@ const Section: React.FC<SectionProps> = ({
   background = 'primary',
   ...props
 }) => {
-  const baseClasses = 'section';
+  const baseClasses = 'py-12 px-4 md:px-8 flex flex-col items-center justify-center';
   const backgroundClasses = {
     primary: '',
     secondary: '',
@@ -39,7 +39,7 @@ const Section: React.FC<SectionProps> = ({
 
   return (
     <section id={id} className={classes} style={sectionStyle} {...props}>
-      <div className="container">{children}</div>
+      <div className="w-full max-w-2xl mx-auto">{children}</div>
     </section>
   );
 };

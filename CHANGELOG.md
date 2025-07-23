@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.6] - 2024-12-19
+
+### 🐛 Critical Fix
+
+- **Fixed sideways layout issue** - removed problematic `.section` CSS that was forcing flex-row layout
+- **Updated Section component** to use proper flex-column layout instead of conflicting CSS classes
+- **Removed unused CSS styles** that were overriding our mobile-first design
+- **Fixed content centering** - all content now properly displays in columns on mobile
+
+### 🎨 Layout & Design
+
+- **Proper mobile-first layout** with flex-column and centered content
+- **Removed conflicting CSS** that was causing layout to be sideways
+- **Better component structure** with consistent flex behavior
+- **Clean, maintainable CSS** without unused or conflicting styles
+
 ## [1.5.5] - 2024-12-19
 
 ### 🎨 Design & Layout

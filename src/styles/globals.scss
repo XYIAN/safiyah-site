@@ -242,41 +242,41 @@ strong {
   }
 }
 
-// Section styles with pastel theme
-.section {
-  padding: $spacing-4xl 0;
-  position: relative;
-  z-index: 5;
+// Remove the problematic .section styles that override our layout
+// .section {
+//   padding: $spacing-4xl 0;
+//   position: relative;
+//   z-index: 5;
 
-  &--hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(248, 240, 255, 0.6) 0%, rgba(255, 255, 255, 0.7) 100%);
-    backdrop-filter: blur(10px);
-  }
+//   &--hero {
+//     min-height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background: linear-gradient(135deg, rgba(248, 240, 255, 0.6) 0%, rgba(255, 255, 255, 0.7) 100%);
+//     backdrop-filter: blur(10px);
+//   }
 
-  &--alternate {
-    background: rgba(248, 240, 255, 0.6);
-    backdrop-filter: blur(5px);
-  }
+//   &--alternate {
+//     background: rgba(248, 240, 255, 0.6);
+//     backdrop-filter: blur(5px);
+//   }
 
-  &[data-background='primary'] {
-    background: rgba(254, 247, 247, 0.6);
-    backdrop-filter: blur(5px);
-  }
+//   &[data-background='primary'] {
+//     background: rgba(254, 247, 247, 0.6);
+//     backdrop-filter: blur(5px);
+//   }
 
-  &[data-background='secondary'] {
-    background: rgba(248, 240, 255, 0.6);
-    backdrop-filter: blur(5px);
-  }
+//   &[data-background='secondary'] {
+//     background: rgba(248, 240, 255, 0.6);
+//     backdrop-filter: blur(5px);
+//   }
 
-  &[data-background='accent'] {
-    background: rgba(255, 240, 245, 0.6);
-    backdrop-filter: blur(5px);
-  }
-}
+//   &[data-background='accent'] {
+//     background: rgba(255, 240, 245, 0.6);
+//     backdrop-filter: blur(5px);
+//   }
+// }
 
 .container {
   max-width: 1200px;
