@@ -38,8 +38,8 @@ export default function Hero() {
             ADHD assessment, emotional support, and therapeutic interventions.
           </p>
 
-          {/* Call to Action - Always flex-col on mobile */}
-          <div className="flex flex-col gap-4 justify-center items-center">
+          {/* Call to Action - Stacked on mobile, side by side on larger screens */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
             <CustomButton
               variant="primary"
               href="/about"

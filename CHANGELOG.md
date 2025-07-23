@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.11] - 2024-12-19
+
+### 🎯 Button Layout Fix
+
+- **Fixed button centering** in Hero component with proper flex layout
+- **Ensured buttons stack on mobile** with `flex-col sm:flex-row` responsive design
+- **Full width buttons on mobile** for better touch targets and visual consistency
+
 ## [1.5.10] - 2024-12-19
 
 ### 🖼️ Hero Image Fix
