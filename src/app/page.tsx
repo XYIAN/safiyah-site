@@ -1,15 +1,15 @@
-import Hero from '@/components/home/Hero'
-import AboutPreview from '@/components/home/AboutPreview'
-import StatsSection from '@/components/home/StatsSection'
-import CallToAction from '@/components/home/CallToAction'
+import Hero from '@/components/home/Hero';
+import AboutSection from '@/components/home/AboutSection';
+import ProfessionalHighlights from '@/components/home/ProfessionalHighlights';
+import GetStartedSection from '@/components/home/GetStartedSection';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <AboutPreview />
-      <StatsSection />
-      <CallToAction />
+      <AboutSection />
+      <ProfessionalHighlights />
+      <GetStartedSection />
     </>
-  )
+  );
 }

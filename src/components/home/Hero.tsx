@@ -1,106 +1,47 @@
 'use client';
 
-import React from 'react';
-import { Heart, Brain } from 'lucide-react';
 import Button from '@/components/common/Button';
+import Image from 'next/image';
 
-const Hero: React.FC = () => {
+export default function Hero() {
   return (
-    <section
-      className="section section--hero relative overflow-hidden"
-      style={{ background: 'rgba(177,156,217,0.18)', backdropFilter: 'blur(12px)' }}
-    >
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-primary-purple/10 rounded-full" />
-        <div className="absolute top-40 right-20 w-16 h-16 bg-secondary-purple/10 rounded-full" />
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-accent-purple/10 rounded-full" />
-      </div>
-
-      <div className="container mx-auto px-4">
-        <div className="flex flex-column align-items-center justify-content-center min-h-screen py-6 gap-6">
-          {/* Left Content (now top) */}
-          <div className="w-full text-center mb-4">
-            <div className="inline-flex align-items-center gap-2 bg-primary-purple/10 text-primary-purple px-4 py-2 border-round text-sm font-medium mb-4">
-              <Heart size={16} />
-              <span>Mental Health Professional</span>
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 line-height-1">
-              <span className="text-gray-900">Safiyah</span>
-              <br />
-              <span className="text-primary-purple">Sohail</span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-gray-600 mb-6 max-w-30rem mx-auto">
-              Specializing in ADHD assessment, emotional support, and therapeutic interventions.
-              Dedicated to providing compassionate mental health care and clinical research.
-            </p>
-
-            {/* Safiyah Image */}
-            <div className="flex justify-content-center mb-6">
-              <img
-                src="/saf.jpeg"
-                alt="Safiyah Sohail"
-                style={{
-                  width: 160,
-                  height: 160,
-                  objectFit: 'cover',
-                  borderRadius: '50%',
-                  boxShadow: '0 4px 24px 0 rgba(177,156,217,0.18)',
-                  border: '4px solid #fff',
-                  background: '#fff',
-                  opacity: 1,
-                }}
-              />
-            </div>
-
-            <div className="flex flex-column sm:flex-row gap-4 justify-content-center mt-4">
-              <Button variant="primary" size="lg" href="/contact">
-                Get in Touch
-              </Button>
-              <Button variant="secondary" size="lg" href="/about">
-                Learn More
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="flex justify-content-center gap-6 mt-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-purple">5+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-purple">200+</div>
-                <div className="text-sm text-gray-600">Clients Helped</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-purple">15+</div>
-                <div className="text-sm text-gray-600">Research Papers</div>
-              </div>
-            </div>
+    <section className="flex flex-col items-center justify-center min-h-screen text-center px-8 md:px-12 py-16">
+      <div className="max-w-4xl mx-auto">
+        {/* Profile Image */}
+        <div className="mb-8">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-6">
+            <Image
+              src="/safiyah-profile.jpg"
+              alt="Safiyah Sohail"
+              fill
+              className="rounded-full object-cover border-4 border-purple-200 shadow-lg"
+              priority
+            />
           </div>
+        </div>
 
-          {/* Visual Elements (now below text) */}
-          <div className="w-full flex justify-content-center mt-4">
-            <div className="relative">
-              {/* Main Card */}
-              <div className="w-20rem h-24rem bg-gradient-to-br from-primary-purple to-secondary-purple border-round-3xl shadow-2xl relative overflow-hidden mb-4">
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
-                <div className="absolute inset-0 flex align-items-center justify-content-center">
-                  <div className="text-center text-white">
-                    <Brain size={80} className="mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold mb-2">Clinical Psychology</h3>
-                    <p className="text-white/80">ADHD Specialist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Main Content */}
+        <h1 className="text-4xl md:text-6xl font-bold text-purple-800 mb-6">Safiyah Sohail</h1>
+
+        <h2 className="text-xl md:text-2xl text-purple-600 mb-8 font-medium">
+          Mental Health Professional & ADHD Specialist
+        </h2>
+
+        <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
+          Dedicated to providing compassionate, evidence-based mental health care. Specializing in
+          ADHD assessment, emotional support, and therapeutic interventions.
+        </p>
+
+        {/* Call to Action */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button variant="primary" href="/about" className="text-lg px-8 py-4">
+            Learn More About Me
+          </Button>
+          <Button variant="secondary" href="/contact" className="text-lg px-8 py-4">
+            Get in Touch
+          </Button>
         </div>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

@@ -1,47 +1,237 @@
 # Changelog
 
-## [1.5.3] - 2024-06-09
+All notable changes to this project will be documented in this file.
 
-### Changed
+## [1.5.4] - 2024-12-19
 
-- Removed all unused variables and imports across the codebase
-- Cleaned up all linter warnings (except Next.js <img> warning)
-- Verified build and linter are error-free
+### 🎨 Design & Layout
 
-## [1.5.2] - 2024-06-09
+- **Complete home page redesign** with cleaner, more focused content
+- **Mobile-first responsive layout** with proper centering and spacing
+- **Simplified home page sections**: Hero, About preview, Professional highlights, Get started
+- **Removed detailed content from home page** - now links to specific pages
+- **Improved InfoCard component** with better mobile responsiveness
+- **Better spacing and padding** throughout all components (2-3rem padding)
+- **Removed background wrapper** from main content for cleaner look
+- **Enhanced visual hierarchy** with proper typography and spacing
 
-### Changed
+### 📱 Mobile Experience
 
-- Moved all static assets (backgrounds, icons) to the root public directory for best Next.js/Netlify compatibility
-- Updated all image references in codebase to use root public paths (e.g., /bg1.png, /main-icon.png)
-- Improved section backgrounds to be more transparent and purple, especially for mobile
+- **Fixed mobile layout issues** - all content now properly centered
+- **Column-based layouts** instead of problematic flex-row on mobile
+- **Responsive grid systems** that work on all screen sizes
+- **Better touch targets** and spacing for mobile interaction
 
-## [1.5.1] - 2024-06-09
+### 🧹 Code Quality
 
-### Fixed
+- **Cleaner component structure** with focused responsibilities
+- **Removed unused imports** and cleaned up linter warnings
+- **Better component organization** with dedicated home page components
 
-- Made /links a client component and fixed icon usage for Next.js/Netlify compatibility
-- Ensured header is always fixed and not affected by background animation
-- Polished layout and centering for both Netlify and localhost compatibility
-- Ran local production build to verify all changes
+### 🔗 Navigation
 
-## [1.5.0] - 2024-06-09
+- **Clear call-to-action buttons** leading to specific pages
+- **Improved user flow** from home page to detailed content pages
+- **Better content distribution** across pages for optimal user experience
 
-### Added
+## [1.5.3] - 2024-12-19
 
-- Glossy, glassmorphic Hero section for a more professional look
-- Links page with PrimeReact Cards and Buttons for LinkedIn and Email
-- Certifications & Education page with reusable list components and PrimeReact Cards
-- PrimeFlex installed and integrated for robust, responsive layouts
+### 🎨 Design & Layout
 
-### Changed
+- **Mobile-first responsive design** with proper centering and spacing
+- **Removed framer-motion animations** and replaced with static components
+- **Added purple particle background overlay** for visual enhancement
+- **Improved header sticky behavior** and main content padding
+- **Enhanced sidebar navigation** with better spacing and larger links
+- **Moved static assets to root public directory** for better Netlify compatibility
 
-- All main layouts and sections now use PrimeFlex utilities for spacing, alignment, and responsiveness
-- Improved SEO and link sharing metadata for all main pages
-- Header and Hero section layout and spacing fixed for both mobile and desktop
+### 📱 Mobile Experience
 
-### Fixed
+- **Fixed mobile layout issues** - all content now properly centered
+- **Column-based layouts** instead of problematic flex-row on mobile
+- **Responsive grid systems** that work on all screen sizes
+- **Better touch targets** and spacing for mobile interaction
 
-- Version number now matches release state
-- Header no longer cut off and has proper padding
-- Hero section always uses a column layout for better focus and centering
+### 🧹 Code Quality
+
+- **Removed all framer-motion usage** and uninstalled package
+- **Cleaned up unused imports** and variables
+- **Fixed all linter warnings** and build errors
+- **Added .prettierrc** for consistent code formatting
+
+### 🚀 Deployment
+
+- **Fixed Netlify build errors** related to framer-motion and client components
+- **Improved static asset handling** for better deployment compatibility
+- **Enhanced build process** with proper error handling
+
+## [1.5.2] - 2024-12-19
+
+### 🎨 Design & Layout
+
+- **Enhanced header design** with better visual balance and sticky behavior
+- **Improved spacing and layout consistency** throughout the site
+- **Added new pages**: Links and Certifications with proper SEO metadata
+- **Better responsive design** with improved mobile experience
+- **Enhanced visual hierarchy** with proper typography and spacing
+
+### 📱 Mobile Experience
+
+- **Fixed mobile layout issues** with better responsive design
+- **Improved touch targets** and navigation on mobile devices
+- **Better content organization** for smaller screens
+
+### 🧹 Code Quality
+
+- **Removed framer-motion animations** and replaced with static components
+- **Cleaned up unused imports** and variables
+- **Fixed linter warnings** and improved code organization
+- **Better component structure** with reusable layouts
+
+### 🚀 Deployment
+
+- **Fixed Netlify build errors** related to framer-motion imports
+- **Improved static asset handling** for better deployment
+- **Enhanced build process** with proper error handling
+
+## [1.5.1] - 2024-12-19
+
+### 🎨 Design & Layout
+
+- **Enhanced header design** with better visual balance
+- **Improved spacing and layout consistency** throughout the site
+- **Added new pages**: Links and Certifications
+- **Better responsive design** with improved mobile experience
+
+### 📱 Mobile Experience
+
+- **Fixed mobile layout issues** with better responsive design
+- **Improved touch targets** and navigation on mobile devices
+
+### 🧹 Code Quality
+
+- **Removed framer-motion animations** and replaced with static components
+- **Cleaned up unused imports** and variables
+- **Fixed linter warnings** and improved code organization
+
+## [1.5.0] - 2024-12-19
+
+### 🎨 Design & Layout
+
+- **Enhanced header design** with better visual balance and sticky behavior
+- **Improved spacing and layout consistency** throughout the site
+- **Added new pages**: Links and Certifications with proper SEO metadata
+- **Better responsive design** with improved mobile experience
+- **Enhanced visual hierarchy** with proper typography and spacing
+
+### 📱 Mobile Experience
+
+- **Fixed mobile layout issues** with better responsive design
+- **Improved touch targets** and navigation on mobile devices
+- **Better content organization** for smaller screens
+
+### 🧹 Code Quality
+
+- **Removed framer-motion animations** and replaced with static components
+- **Cleaned up unused imports** and variables
+- **Fixed linter warnings** and improved code organization
+- **Better component structure** with reusable layouts
+
+### 🚀 Deployment
+
+- **Fixed Netlify build errors** related to framer-motion imports
+- **Improved static asset handling** for better deployment
+- **Enhanced build process** with proper error handling
+
+## [1.4.0] - 2024-12-19
+
+### 🎨 Design & Layout
+
+- **Enhanced header design** with better visual balance
+- **Improved spacing and layout consistency** throughout the site
+- **Added new pages**: Links and Certifications
+- **Better responsive design** with improved mobile experience
+
+### 📱 Mobile Experience
+
+- **Fixed mobile layout issues** with better responsive design
+- **Improved touch targets** and navigation on mobile devices
+
+### 🧹 Code Quality
+
+- **Removed framer-motion animations** and replaced with static components
+- **Cleaned up unused imports** and variables
+- **Fixed linter warnings** and improved code organization
+
+## [1.3.0] - 2024-12-19
+
+### 🎨 Design & Layout
+
+- **Enhanced header design** with better visual balance
+- **Improved spacing and layout consistency** throughout the site
+- **Added new pages**: Links and Certifications
+- **Better responsive design** with improved mobile experience
+
+### 📱 Mobile Experience
+
+- **Fixed mobile layout issues** with better responsive design
+- **Improved touch targets** and navigation on mobile devices
+
+### 🧹 Code Quality
+
+- **Removed framer-motion animations** and replaced with static components
+- **Cleaned up unused imports** and variables
+- **Fixed linter warnings** and improved code organization
+
+## [1.2.0] - 2024-12-19
+
+### 🎨 Design & Layout
+
+- **Enhanced header design** with better visual balance
+- **Improved spacing and layout consistency** throughout the site
+- **Added new pages**: Links and Certifications
+- **Better responsive design** with improved mobile experience
+
+### 📱 Mobile Experience
+
+- **Fixed mobile layout issues** with better responsive design
+- **Improved touch targets** and navigation on mobile devices
+
+### 🧹 Code Quality
+
+- **Removed framer-motion animations** and replaced with static components
+- **Cleaned up unused imports** and variables
+- **Fixed linter warnings** and improved code organization
+
+## [1.1.0] - 2024-12-19
+
+### 🎨 Design & Layout
+
+- **Enhanced header design** with better visual balance
+- **Improved spacing and layout consistency** throughout the site
+- **Added new pages**: Links and Certifications
+- **Better responsive design** with improved mobile experience
+
+### 📱 Mobile Experience
+
+- **Fixed mobile layout issues** with better responsive design
+- **Improved touch targets** and navigation on mobile devices
+
+### 🧹 Code Quality
+
+- **Removed framer-motion animations** and replaced with static components
+- **Cleaned up unused imports** and variables
+- **Fixed linter warnings** and improved code organization
+
+## [1.0.0] - 2024-12-19
+
+### 🎉 Initial Release
+
+- **Complete portfolio website** for Safiyah Sohail
+- **Modern React/Next.js architecture** with TypeScript
+- **PrimeReact UI components** for consistent design
+- **Responsive design** that works on all devices
+- **SEO optimized** with proper metadata
+- **Professional mental health professional portfolio**
+- **Multiple pages**: Home, About, Experience, Education, Contact, Links, Certifications
+- **Beautiful purple theme** with modern design elements
