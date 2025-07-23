@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="mb-8">
           <div className="relative w-24 h-24 md:w-32 md:h-32 mx-auto mb-6">
             <Image
-              src="/safiyah-profile.jpg"
+              src="/saf.jpeg"
               alt="Safiyah Sohail"
               fill
               className="rounded-full object-cover border-4 border-purple-200 shadow-lg"
